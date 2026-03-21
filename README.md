@@ -20,7 +20,7 @@
 
 ---
 
-## 📌 Sobre o Projeto
+## 📌 Sobre o Projeto:
 
 O **MoodleExt** é uma adaptação do Moodle 5.1.3+ voltada para atender demandas específicas do IFSERTÃO-PE, com foco em:
 
@@ -38,13 +38,13 @@ Este projeto demonstra conhecimentos em:
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas:
 
-- PHP 8.2+  
-- MariaDB 10.11+  
-- Apache 2.4+  
-- Composer  
-- Moodle 5.1.3+  
+- PHP 8.2+
+- MariaDB 10.11+
+- Apache 2.4+
+- Composer
+- Moodle 5.1.3+
 
 ---
 
@@ -81,8 +81,8 @@ composer install --no-dev --classmap-authoritative
 
 ### 3. Criar banco de dados
 
-- **Nome:** `moodleext`  
-- **Collation:** `utf8mb4_unicode_ci`  
+- **Nome:** `moodleext`
+- **Collation:** `utf8mb4_unicode_ci`
 
 Ou via terminal:
 
@@ -157,7 +157,8 @@ http://localhost/moodleExt/
 
 ---
 
-## 🧱 Estrutura do Projeto
+## 🧱 Estrutura do Projeto:
+
 
 ```bash
 moodleExt/
