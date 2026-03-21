@@ -139,6 +139,7 @@ moodleExt/
 ├── lib/
 ├── vendor/
 └── server/
+
 🌿 Branches
 Branch	Descrição
 main	Produção
