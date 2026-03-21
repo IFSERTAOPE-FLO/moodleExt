@@ -159,6 +159,7 @@ http://localhost/moodleExt/
 
 ## 🧱 Estrutura do Projeto:
 
+A estrutura do código foi organizada da seguinte maneira:
 
 ```bash
 moodleExt/
