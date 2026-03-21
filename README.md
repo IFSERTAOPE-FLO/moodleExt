@@ -124,6 +124,7 @@ C:\xampp\mysql\bin\mysql.exe -u root -e "SELECT VERSION();"
 Acesse:
 
 http://localhost/moodleExt/
+
 🧱 Estrutura do Projeto
 moodleExt/
 ├── config.php
