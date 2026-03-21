@@ -84,3 +84,66 @@ Collation: utf8mb4_unicode_ci
 Ou via terminal:
 
 C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE moodleext DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+
+4. Configuração
+copy config-dist.php config.php
+$CFG->dbtype    = 'mariadb';
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'moodleext';
+$CFG->dbuser    = 'root';
+$CFG->dbpass    = '';
+$CFG->prefix    = 'mdl_';
+$CFG->wwwroot   = 'http://localhost/moodleExt';
+$CFG->dataroot  = 'C:\\moodledata';
+5. Diretório de dados
+mkdir C:\moodledata
+6. Configuração do Apache
+Alias /moodleExt "C:/xampp/htdocs/moodleExt/public"
+
+<Directory "C:/xampp/htdocs/moodleExt/public">
+    AllowOverride All
+    Require all granted
+</Directory>
+7. Configuração do PHP
+
+No php.ini:
+
+extension=gd
+extension=intl
+extension=sodium
+extension=zip
+extension=soap
+
+max_input_vars = 5000
+zend.exception_ignore_args = On
+8. Verificar MariaDB
+C:\xampp\mysql\bin\mysql.exe -u root -e "SELECT VERSION();"
+9. Executar o sistema
+
+Acesse:
+
+http://localhost/moodleExt/
+🧱 Estrutura do Projeto
+moodleExt/
+├── config.php
+├── config-dist.php
+├── composer.json
+├── public/
+│   ├── index.php
+│   ├── admin/
+│   ├── mod/
+│   ├── theme/
+│   └── ...
+├── lib/
+├── vendor/
+└── server/
+🌿 Branches
+Branch	Descrição
+main	Produção
+victor	Desenvolvimento
+📄 Licença
+
+Este projeto é baseado no Moodle e distribuído sob a licença:
+
+GNU General Public License v3.0
