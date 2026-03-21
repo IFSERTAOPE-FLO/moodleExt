@@ -189,5 +189,3 @@ moodleExt/
 ## 📄 Licença
 
 Este projeto é baseado no Moodle e distribuído sob a licença:
-
-**GNU General Public License v3.0**
