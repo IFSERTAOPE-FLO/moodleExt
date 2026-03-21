@@ -24,38 +24,38 @@
 
 O **MoodleExt** é uma adaptação do Moodle 5.1.3+ voltada para atender demandas específicas do IFSERTÃO-PE, com foco em:
 
-- Gestão acadêmica centralizada;
-- Customização de ambiente educacional;
-- Escalabilidade para múltiplos usuários e cursos;
-- Organização institucional;
+- Gestão acadêmica centralizada  
+- Customização de ambiente educacional  
+- Escalabilidade para múltiplos usuários e cursos  
+- Organização institucional  
 
 Este projeto demonstra conhecimentos em:
 
-- Arquitetura de sistemas web;
-- Configuração de ambiente local (XAMPP);
-- Integração com banco de dados;
-- Customização de sistemas open source;
+- Arquitetura de sistemas web  
+- Configuração de ambiente local (XAMPP)  
+- Integração com banco de dados  
+- Customização de sistemas open source  
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-- PHP 8.2+
-- MariaDB 10.11+
-- Apache 2.4+
-- Composer
-- Moodle 5.1.3+
+- PHP 8.2+  
+- MariaDB 10.11+  
+- Apache 2.4+  
+- Composer  
+- Moodle 5.1.3+  
 
 ---
 
-## ⚙️ Pré-requisitos:
+## ⚙️ Pré-requisitos
 
 | Requisito | Versão mínima |
-|----------|-------------|
-| PHP      | 8.2+        |
-| MariaDB  | 10.11+      |
-| Apache   | 2.4+        |
-| Composer | 2.x         |
+|----------|--------------|
+| PHP      | 8.2+         |
+| MariaDB  | 10.11+       |
+| Apache   | 2.4+         |
+| Composer | 2.x          |
 
 ### Extensões PHP obrigatórias
 
@@ -75,19 +75,30 @@ cd moodleExt
 
 ### 2. Instalar dependências
 
+```bash
 composer install --no-dev --classmap-authoritative
+```
 
-3. Criar banco de dados
-Nome: moodleext
-Collation: utf8mb4_unicode_ci
+### 3. Criar banco de dados
+
+- **Nome:** `moodleext`  
+- **Collation:** `utf8mb4_unicode_ci`  
 
 Ou via terminal:
 
+```bash
 C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE moodleext DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+```
 
+### 4. Configuração
 
-4. Configuração
+```bash
 copy config-dist.php config.php
+```
+
+Edite o arquivo `config.php`:
+
+```php
 $CFG->dbtype    = 'mariadb';
 $CFG->dbhost    = 'localhost';
 $CFG->dbname    = 'moodleext';
@@ -96,19 +107,30 @@ $CFG->dbpass    = '';
 $CFG->prefix    = 'mdl_';
 $CFG->wwwroot   = 'http://localhost/moodleExt';
 $CFG->dataroot  = 'C:\\moodledata';
-5. Diretório de dados
+```
+
+### 5. Criar diretório de dados
+
+```bash
 mkdir C:\moodledata
-6. Configuração do Apache
+```
+
+### 6. Configuração do Apache
+
+```apache
 Alias /moodleExt "C:/xampp/htdocs/moodleExt/public"
 
 <Directory "C:/xampp/htdocs/moodleExt/public">
     AllowOverride All
     Require all granted
 </Directory>
-7. Configuração do PHP
+```
 
-No php.ini:
+### 7. Configuração do PHP
 
+No arquivo `php.ini`:
+
+```ini
 extension=gd
 extension=intl
 extension=sodium
@@ -117,16 +139,27 @@ extension=soap
 
 max_input_vars = 5000
 zend.exception_ignore_args = On
-8. Verificar MariaDB
+```
+
+### 8. Verificar versão do MariaDB
+
+```bash
 C:\xampp\mysql\bin\mysql.exe -u root -e "SELECT VERSION();"
-9. Executar o sistema
+```
 
-Acesse:
+### 9. Executar o sistema
 
+Acesse no navegador:
+
+```
 http://localhost/moodleExt/
+```
 
-🧱 Estrutura do Projeto:
+---
 
+## 🧱 Estrutura do Projeto
+
+```bash
 moodleExt/
 ├── config.php
 ├── config-dist.php
@@ -140,14 +173,21 @@ moodleExt/
 ├── lib/
 ├── vendor/
 └── server/
+```
 
-🌿 Branches
-Branch	Descrição
-main	Produção
-victor	Desenvolvimento
+---
 
-📄 Licença
+## 🌿 Branches
+
+| Branch  | Descrição        |
+|--------|------------------|
+| main   | Produção         |
+| victor | Desenvolvimento  |
+
+---
+
+## 📄 Licença
 
 Este projeto é baseado no Moodle e distribuído sob a licença:
 
-GNU General Public License v3.0
+**GNU General Public License v3.0**
