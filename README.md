@@ -144,6 +144,7 @@ moodleExt/
 Branch	Descrição
 main	Produção
 victor	Desenvolvimento
+
 📄 Licença
 
 Este projeto é baseado no Moodle e distribuído sob a licença:
