@@ -48,7 +48,7 @@ Este projeto demonstra conhecimentos em:
 
 ---
 
-## ⚙️ Pré-requisitos
+## ⚙️ Pré-requisitos:
 
 | Requisito | Versão mínima |
 |----------|-------------|
