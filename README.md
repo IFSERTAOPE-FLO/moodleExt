@@ -71,4 +71,16 @@ Este projeto demonstra conhecimentos em:
 cd C:\xampp\htdocs
 git clone https://github.com/IFSERTAOPE-FLO/moodleExt.git
 cd moodleExt
+```
 
+### 2. Instalar dependências
+
+composer install --no-dev --classmap-authoritative
+
+3. Criar banco de dados
+Nome: moodleext
+Collation: utf8mb4_unicode_ci
+
+Ou via terminal:
+
+C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE moodleext DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
