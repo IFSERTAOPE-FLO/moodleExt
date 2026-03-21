@@ -125,7 +125,8 @@ Acesse:
 
 http://localhost/moodleExt/
 
-🧱 Estrutura do Projeto
+🧱 Estrutura do Projeto:
+
 moodleExt/
 ├── config.php
 ├── config-dist.php
