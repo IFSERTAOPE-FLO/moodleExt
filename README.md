@@ -31,10 +31,10 @@ O **MoodleExt** é uma adaptação do Moodle 5.1.3+ voltada para atender demanda
 
 Este projeto demonstra conhecimentos em:
 
-- Arquitetura de sistemas web
-- Configuração de ambiente local (XAMPP)
-- Integração com banco de dados
-- Customização de sistemas open source
+- Arquitetura de sistemas web;
+- Configuração de ambiente local (XAMPP);
+- Integração com banco de dados;
+- Customização de sistemas open source;
 
 ---
 
