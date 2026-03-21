@@ -7,7 +7,7 @@
 <h1 align="center">MoodleExt</h1>
 
 <p align="center">
-  Sistema educacional customizado baseado no Moodle para gestão acadêmica no 
+  Sistema educacional customizado baseado no Moodle para gestão acadêmica no
   <strong>IFSERTÃO-PE Campus Floresta</strong>.
 </p>
 
