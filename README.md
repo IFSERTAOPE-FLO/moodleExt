@@ -24,10 +24,10 @@
 
 O **MoodleExt** é uma adaptação do Moodle 5.1.3+ voltada para atender demandas específicas do IFSERTÃO-PE, com foco em:
 
-- Gestão acadêmica centralizada  
-- Customização de ambiente educacional  
-- Escalabilidade para múltiplos usuários e cursos  
-- Organização institucional  
+- Gestão acadêmica centralizada
+- Customização de ambiente educacional
+- Escalabilidade para múltiplos usuários e cursos
+- Organização institucional
 
 Este projeto demonstra conhecimentos em:
 
