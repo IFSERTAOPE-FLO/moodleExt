@@ -8,7 +8,7 @@
 
 <p align="center">
   Sistema educacional customizado baseado no Moodle para gestão acadêmica no
-  <strong>IFSERTÃO-PE Campus Floresta</strong>.
+  <strong>IFSERTÃO-PE Campus Floresta</strong>. O mesmo foi desenvolvido como um projeto de extensão cujo o intuito era ajudar toda a comunidade acadêmica.
 </p>
 
 <p align="center">
