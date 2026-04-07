@@ -308,9 +308,3 @@ moodleExt/
 ├── vendor/
 └── server/
 ```
-
----
-
-## 📄 Licença
-
-Este projeto é baseado no Moodle e distribuído sob a licença:
