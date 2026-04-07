@@ -312,3 +312,8 @@ moodleExt/
 ├── vendor/
 └── server/
 ```
+
+## Direitos e Licença:
+
+O MoodleExt é um projeto de código aberto licenciado sob a [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html). Sinta-se à vontade para usar, modificar e distribuir o código, desde que respeite os termos da licença.
+
