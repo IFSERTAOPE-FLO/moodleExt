@@ -293,25 +293,91 @@ Se a senha não for solicitada, deixe `$CFG->dbpass = '';`
 
 ---
 
-## 🧱 Estrutura do Projeto:
+## 🧱 Estrutura do Projeto
 
-A estrutura do código foi organizada da seguinte maneira:
+A estrutura do código foi organizada da seguinte maneira para manter uma arquitetura clara e modular:
 
 ```bash
 moodleExt/
-├── config.php
-├── config-dist.php
-├── composer.json
-├── public/
-│   ├── index.php
-│   ├── admin/
-│   ├── mod/
-│   ├── theme/
-│   └── ...
-├── lib/
-├── vendor/
-└── server/
+├── 📄 config.php                 # Arquivo de configuração principal (gerado)
+├── 📄 config-dist.php            # Arquivo de configuração padrão (modelo)
+├── 📄 index.php                  # Redirecionamento para pasta public/
+├── 📄 composer.json              # Dependências do Composer
+├── 📄 composer.lock              # Versões travadas de dependências
+├── 📄 package.json               # Dependências npm (assets/build)
+├── 📄 README.md                  # Este arquivo
+├── 📄 CONTRIBUTING.md            # Guia de contribuição
+├── 📄 COPYING.txt                # Licença GPLv3
+├── 📄 githash.php                # Hash do commit Git
+├── 📄 Gruntfile.js               # Configuração de build (Grunt)
+├── 📄 phpunit.xml.dist           # Configuração de testes unitários
+├── 📄 phpcs.xml.dist             # Configuração de padrões de código
+│
+├── 📁 public/                    # Raiz web pública (acessada pelo Apache)
+│   ├── 📄 index.php              # Ponto de entrada da aplicação
+│   ├── 📄 install.php            # Instalador web do Moodle
+│   ├── 📄 config.php             # Carregador de configuração
+│   ├── 📁 admin/                 # Painel administrativo
+│   ├── 📁 lib/
+│   │   └── 📄 setup.php          # Arquivo de inicialização do sistema
+│   ├── 📁 mod/                   # Módulos de conteúdo (atividades)
+│   ├── 📁 theme/                 # Temas do Moodle
+│   ├── 📁 course/                # Gestão de cursos
+│   ├── 📁 user/                  # Gestão de usuários
+│   ├── 📁 grade/                 # Sistema de notas
+│   ├── 📁 auth/                  # Autenticação
+│   ├── 📁 blocks/                # Blocos do Moodle
+│   ├── 📁 cache/                 # Sistema de cache
+│   ├── 📁 completion/            # Conclusão de atividades
+│   ├── 📁 group/                 # Gestão de grupos
+│   ├── 📁 message/               # Sistema de mensagens
+│   ├── 📁 rating/                # Sistema de classificações
+│   ├── 📁 tag/                   # Sistema de tags
+│   ├── 📁 filter/                # Filtros de conteúdo
+│   ├── 📁 lang/                  # Pacotes de idiomas
+│   ├── 📁 pix/                   # Imagens e ícones
+│   └── 📁 ...                    # Outros componentes
+│
+├── 📁 lib/                       # Biblioteca de configuração
+│   ├── 📄 setup.php              # Redirecionador para public/lib/setup.php
+│   ├── 📁 behat/                 # Testes BDD (Behat)
+│   └── 📁 ...                    # Outros componentes de biblioteca
+│
+├── 📁 admin/                     # Scripts administrativos CLI
+│   └── 📁 cli/                   # Utilitários de linha de comando
+│       ├── 📄 install.php        # Instalação via CLI
+│       ├── 📄 upgrade.php        # Atualização via CLI
+│       ├── 📄 cron.php           # Tarefas agendadas
+│       └── 📄 ...                # Outros scripts
+│
+├── 📁 vendor/                    # Dependências instaladas via Composer
+│   └── 📄 autoload.php           # Autoloader PSR-4
+│
+├── 📁 server/                    # Configurações de servidor
+│   └── 📁 mysql/                 # Scripts MySQL (opcional)
+│
+├── 📁 Doc/                       # Documentação do projeto
+│   ├── 📄 INSTALL.txt            # Instruções de instalação
+│   ├── 📄 UPGRADING.md           # Guia de atualização
+│   ├── 📄 TRADEMARK.txt          # Marcas registradas
+│   └── 📁 configuracao/          # Documentação de configuração
+│
+└── 📁 .github/                   # Configurações GitHub
+    ├── 📁 workflows/             # GitHub Actions CI/CD
+    └── 📄 ...                    # Outros arquivos Git
 ```
+
+### 📋 Descrição dos Diretórios Principais
+
+| Diretório | Descrição |
+|-----------|-----------|
+| `public/` | **Raiz web pública** - Único diretório acessível via HTTP. Contém toda a interface do Moodle. |
+| `lib/` | **Biblioteca do sistema** - Código de suporte e inicialização. |
+| `admin/cli/` | **Scripts administrativos** - Utilitários para instalação, atualização e manutenção. |
+| `vendor/` | **Dependências Composer** - Bibliotecas PHP externas. |
+| `Doc/` | **Documentação** - Guias de instalação e configuração. |
+
+---
 
 ## Direitos e Licença:
 
