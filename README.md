@@ -293,34 +293,34 @@ Se a senha não for solicitada, deixe `$CFG->dbpass = '';`
 
 ---
 
-## 🧱 Estrutura do Projeto
+## 🧱 Estrutura do Projeto:
 
 A estrutura do código foi organizada da seguinte maneira para manter uma arquitetura clara e modular:
 
 ```bash
 moodleExt/
-├── 📄 config.php                 # Arquivo de configuração principal (gerado)
-├── 📄 config-dist.php            # Arquivo de configuração padrão (modelo)
-├── 📄 index.php                  # Redirecionamento para pasta public/
-├── 📄 composer.json              # Dependências do Composer
-├── 📄 composer.lock              # Versões travadas de dependências
-├── 📄 package.json               # Dependências npm (assets/build)
-├── 📄 README.md                  # Este arquivo
-├── 📄 CONTRIBUTING.md            # Guia de contribuição
-├── 📄 COPYING.txt                # Licença GPLv3
-├── 📄 githash.php                # Hash do commit Git
-├── 📄 Gruntfile.js               # Configuração de build (Grunt)
-├── 📄 phpunit.xml.dist           # Configuração de testes unitários
-├── 📄 phpcs.xml.dist             # Configuração de padrões de código
+├── config.php                 # Arquivo de configuração principal (gerado)
+├── config-dist.php            # Arquivo de configuração padrão (modelo)
+├── index.php                  # Redirecionamento para pasta public/
+├── composer.json              # Dependências do Composer
+├── composer.lock              # Versões travadas de dependências
+├── package.json               # Dependências npm (assets/build)
+├── README.md                  # Este arquivo
+├── CONTRIBUTING.md            # Guia de contribuição
+├── COPYING.txt                # Licença GPLv3
+├── githash.php                # Hash do commit Git
+├── Gruntfile.js               # Configuração de build (Grunt)
+├── phpunit.xml.dist           # Configuração de testes unitários
+├── phpcs.xml.dist             # Configuração de padrões de código
 │
-├── 📁 public/                    # Raiz web pública (acessada pelo Apache)
-│   ├── 📄 index.php              # Ponto de entrada da aplicação
-│   ├── 📄 install.php            # Instalador web do Moodle
-│   ├── 📄 config.php             # Carregador de configuração
-│   ├── 📁 admin/                 # Painel administrativo
-│   ├── 📁 lib/
-│   │   └── 📄 setup.php          # Arquivo de inicialização do sistema
-│   ├── 📁 mod/                   # Módulos de conteúdo (atividades)
+├── public/                    # Raiz web pública (acessada pelo Apache)
+│   ├── index.php              # Ponto de entrada da aplicação
+│   ├── install.php            # Instalador web do Moodle
+│   ├── config.php             # Carregador de configuração
+│   ├── admin/                 # Painel administrativo
+│   ├── lib/
+│   │   └── setup.php          # Arquivo de inicialização do sistema
+│   ├──  mod/                   # Módulos de conteúdo (atividades)
 │   ├── 📁 theme/                 # Temas do Moodle
 │   ├── 📁 course/                # Gestão de cursos
 │   ├── 📁 user/                  # Gestão de usuários
