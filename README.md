@@ -36,11 +36,6 @@ Este projeto demonstra conhecimentos em:
 - Integração com banco de dados;
 - Customização de sistemas open source;
 
----
-
-## � O que foi Feito
-
-Este projeto foi configurado com sucesso em um ambiente Windows com XAMPP. Durante a instalação e configuração, foram realizadas as seguintes atividades: **iniciação dos serviços Apache e MySQL**, **criação do banco de dados `moodleext`** com a collation correta para suportar caracteres UTF-8, **configuração do arquivo `config.php`** com as credenciais do banco e caminhos necessários, **criação do diretório de dados `C:\moodledata`** para armazenar arquivos do sistema, **correção do arquivo `lib/setup.php`** para inicializar corretamente a propriedade `$CFG->libdir`, **modificação do `index.php` da raiz** para redirecionar automaticamente à pasta `public`, e **validação de toda a estrutura** através de testes PHP CLI. O sistema agora está totalmente funcional e pronto para ser acessado através do instalador web em `http://localhost/moodleExt/`, permitindo a conclusão da instalação com a criação do usuário administrador e tabelas finais do banco de dados.
 
 ---
 
