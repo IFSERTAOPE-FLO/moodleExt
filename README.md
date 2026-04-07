@@ -51,7 +51,9 @@ As tecnologias e ferramentas utilizadas para o desenvolvimento e implantação d
 
 ---
 
-## ⚙️ Pré-requisitos
+## ⚙️ Pré-requisitos:
+
+Para garantir uma instalação bem-sucedida do MoodleExt, certifique-se de que seu ambiente local atenda aos seguintes requisitos:
 
 | Requisito | Versão mínima |
 |----------|--------------|
