@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Se o caminho não começa com /public, redirecione para lá
+    RewriteCond %{REQUEST_URI} !^/moodleExt/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    RewriteRule ^(.*)$ public/$1 [L,PT]
+</IfModule>

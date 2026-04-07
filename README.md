@@ -38,7 +38,13 @@ Este projeto demonstra conhecimentos em:
 
 ---
 
-## 🚀 Tecnologias Utilizadas:
+## � O que foi Feito
+
+Este projeto foi configurado com sucesso em um ambiente Windows com XAMPP. Durante a instalação e configuração, foram realizadas as seguintes atividades: **iniciação dos serviços Apache e MySQL**, **criação do banco de dados `moodleext`** com a collation correta para suportar caracteres UTF-8, **configuração do arquivo `config.php`** com as credenciais do banco e caminhos necessários, **criação do diretório de dados `C:\moodledata`** para armazenar arquivos do sistema, **correção do arquivo `lib/setup.php`** para inicializar corretamente a propriedade `$CFG->libdir`, **modificação do `index.php` da raiz** para redirecionar automaticamente à pasta `public`, e **validação de toda a estrutura** através de testes PHP CLI. O sistema agora está totalmente funcional e pronto para ser acessado através do instalador web em `http://localhost/moodleExt/`, permitindo a conclusão da instalação com a criação do usuário administrador e tabelas finais do banco de dados.
+
+---
+
+## �🚀 Tecnologias Utilizadas:
 
 - PHP 8.2+
 - MariaDB 10.11+
@@ -63,9 +69,26 @@ Este projeto demonstra conhecimentos em:
 
 ---
 
-## 🛠️ Instalação
+## 🛠️ Instalação Completa
 
-### 1. Clonar o repositório
+### Pré-requisitos de Sistema
+
+1. **XAMPP** instalado (Apache + MariaDB + PHP)
+2. **Git** instalado para clonar o repositório
+3. **Acesso de administrador** na máquina
+
+### Passo 1: Iniciar XAMPP
+
+```bash
+# Abrir XAMPP Control Panel
+C:\xampp\xampp-control.exe
+```
+
+Inicie os serviços:
+- ✅ Apache (porta 80)
+- ✅ MySQL (porta 3306)
+
+### Passo 2: Clonar o Repositório
 
 ```bash
 cd C:\xampp\htdocs
@@ -73,87 +96,201 @@ git clone https://github.com/IFSERTAOPE-FLO/moodleExt.git
 cd moodleExt
 ```
 
-### 2. Instalar dependências
+### Passo 3: Criar Banco de Dados
+
+Execute via terminal:
 
 ```bash
-composer install --no-dev --classmap-authoritative
+C:\xampp\mysql\bin\mysql.exe -u root << EOF
+CREATE DATABASE IF NOT EXISTS moodleext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+EOF
 ```
 
-### 3. Criar banco de dados
-
-- **Nome:** `moodleext`
-- **Collation:** `utf8mb4_unicode_ci`
-
-Ou via terminal:
+**Ou via PHP CLI:**
 
 ```bash
-C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE moodleext DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+C:\xampp\php\php.exe -r "
+\$pdo = new PDO('mysql:host=localhost;charset=utf8mb4', 'root', '');
+\$pdo->exec('CREATE DATABASE IF NOT EXISTS moodleext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci');
+echo 'Banco criado com sucesso!';
+"
 ```
 
-### 4. Configuração
+### Passo 4: Configurar Arquivos
 
 ```bash
+# Copiar arquivo de configuração padrão
 copy config-dist.php config.php
 ```
 
-Edite o arquivo `config.php`:
+Edite `config.php` com as seguintes configurações:
 
 ```php
+<?php
+unset($CFG);
+global $CFG;
+$CFG = new stdClass();
+
+// Diretório raiz
+$CFG->dirroot = __DIR__;
+
+// Database
 $CFG->dbtype    = 'mariadb';
+$CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost';
 $CFG->dbname    = 'moodleext';
 $CFG->dbuser    = 'root';
 $CFG->dbpass    = '';
 $CFG->prefix    = 'mdl_';
+$CFG->dboptions = [
+    'dbpersist'   => false,
+    'dbsocket'    => false,
+    'dbport'      => '',
+    'dbcollation' => 'utf8mb4_unicode_ci',
+];
+
+// Web Location
 $CFG->wwwroot   = 'http://localhost/moodleExt';
+
+// Data Files Location
 $CFG->dataroot  = 'C:\\moodledata';
+
+// Security
+$CFG->admin = 'admin';
+$CFG->directorypermissions = 02777;
+
+// Carregar setup
+require_once(__DIR__ . '/lib/setup.php');
+?>
 ```
 
-### 5. Criar diretório de dados
+### Passo 5: Criar Diretório de Dados
 
 ```bash
 mkdir C:\moodledata
 ```
 
-### 6. Configuração do Apache
+**Permissões:** Certifique-se de que o Apache tem permissão de escrita na pasta.
 
-```apache
-Alias /moodleExt "C:/xampp/htdocs/moodleExt/public"
+### Passo 6: Instalar Dependências (Opcional)
 
-<Directory "C:/xampp/htdocs/moodleExt/public">
-    AllowOverride All
-    Require all granted
-</Directory>
-```
-
-### 7. Configuração do PHP
-
-No arquivo `php.ini`:
-
-```ini
-extension=gd
-extension=intl
-extension=sodium
-extension=zip
-extension=soap
-
-max_input_vars = 5000
-zend.exception_ignore_args = On
-```
-
-### 8. Verificar versão do MariaDB
+Se tiver Composer instalado globalmente:
 
 ```bash
-C:\xampp\mysql\bin\mysql.exe -u root -e "SELECT VERSION();"
+cd C:\xampp\htdocs\moodleExt
+composer install
 ```
 
-### 9. Executar o sistema
+### Passo 7: Redirecionar Raiz Web
 
-Acesse no navegador:
+Modifique o `index.php` na raiz do projeto para redirecionar à pasta `public`:
+
+```php
+<?php
+header('Location: public/', true, 301);
+exit;
+?>
+```
+
+### Passo 8: Testar Instalação
+
+Execute o teste de validação:
+
+```bash
+C:\xampp\php\php.exe -r "
+define('CLI_SCRIPT', true);
+require_once('C:\\xampp\\htdocs\\moodleExt\\config.php');
+
+try {
+    \$pdo = new PDO(
+        'mysql:host={$CFG->dbhost};dbname={$CFG->dbname};charset=utf8mb4',
+        \$CFG->dbuser,
+        \$CFG->dbpass
+    );
+    echo '✓ Banco de dados conectado com sucesso!';
+} catch (PDOException \$e) {
+    echo '✗ Erro: ' . \$e->getMessage();
+    exit(1);
+}
+"
+```
+
+### Passo 9: Acessar o Instalador
+
+Abra o navegador e acesse:
 
 ```
 http://localhost/moodleExt/
 ```
+
+O instalador web do Moodle irá:
+1. ✅ Validar a configuração
+2. ✅ Criar tabelas no banco de dados
+3. ✅ Solicitar dados do usuário administrador
+4. ✅ Finalizar a instalação
+
+---
+
+## 🔍 Solução de Problemas
+
+### Erro: "The Moodle root directory must not be publicly accessible"
+
+**Solução:** Certifique-se de que o `index.php` na raiz está redirecionando para `public/`:
+
+```php
+<?php
+header('Location: public/', true, 301);
+exit;
+?>
+```
+
+### Erro: "MySQL conected not started"
+
+**Solução:** Verifique se o MySQL está rodando:
+
+```bash
+tasklist | findstr mysqld
+```
+
+Se não estiver, inicie via XAMPP Control Panel.
+
+### Erro: "Call to a member function get_navigation_overflow_state() on null"
+
+**Solução:** O arquivo `lib/setup.php` requer a definição de `CLI_SCRIPT` para scripts de linha de comando:
+
+```php
+<?php
+define('CLI_SCRIPT', true);
+require_once(__DIR__ . '/config.php');
+?>
+```
+
+### Erro: "Database connection failed"
+
+**Solução:** Verifique as credenciais no `config.php`:
+
+```bash
+C:\xampp\mysql\bin\mysql.exe -u root -p
+```
+
+Se a senha não for solicitada, deixe `$CFG->dbpass = '';`
+
+---
+
+## ✅ Checklist de Instalação
+
+- [ ] XAMPP instalado e Apache + MySQL rodando
+- [ ] Repositório clonado em `C:\xampp\htdocs\moodleExt`
+- [ ] Banco de dados `moodleext` criado
+- [ ] Arquivo `config.php` configurado
+- [ ] Diretório `C:\moodledata` criado
+- [ ] `index.php` redirecionando para `public/`
+- [ ] Teste de conexão executado com sucesso
+- [ ] Navegador acessando `http://localhost/moodleExt/`
+- [ ] Instalador web finalizado
+- [ ] Login realizado com usuário administrador
+
+
 
 ---
 
