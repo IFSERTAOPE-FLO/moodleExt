@@ -224,6 +224,7 @@ http://localhost/moodleExt/
 ```
 
 O instalador web do Moodle irá:
+
 1. ✅ Validar a configuração
 2. ✅ Criar tabelas no banco de dados
 3. ✅ Solicitar dados do usuário administrador
