@@ -321,24 +321,24 @@ moodleExt/
 │   ├── lib/
 │   │   └── setup.php          # Arquivo de inicialização do sistema
 │   ├──  mod/                   # Módulos de conteúdo (atividades)
-│   ├── 📁 theme/                 # Temas do Moodle
-│   ├── 📁 course/                # Gestão de cursos
-│   ├── 📁 user/                  # Gestão de usuários
-│   ├── 📁 grade/                 # Sistema de notas
-│   ├── 📁 auth/                  # Autenticação
-│   ├── 📁 blocks/                # Blocos do Moodle
-│   ├── 📁 cache/                 # Sistema de cache
-│   ├── 📁 completion/            # Conclusão de atividades
-│   ├── 📁 group/                 # Gestão de grupos
-│   ├── 📁 message/               # Sistema de mensagens
-│   ├── 📁 rating/                # Sistema de classificações
-│   ├── 📁 tag/                   # Sistema de tags
-│   ├── 📁 filter/                # Filtros de conteúdo
-│   ├── 📁 lang/                  # Pacotes de idiomas
-│   ├── 📁 pix/                   # Imagens e ícones
-│   └── 📁 ...                    # Outros componentes
+│   ├── theme/                 # Temas do Moodle
+│   ├── course/                # Gestão de cursos
+│   ├── user/                  # Gestão de usuários
+│   ├── grade/                 # Sistema de notas
+│   ├── auth/                  # Autenticação
+│   ├── blocks/                # Blocos do Moodle
+│   ├── cache/                 # Sistema de cache
+│   ├── completion/            # Conclusão de atividades
+│   ├── group/                 # Gestão de grupos
+│   ├── message/               # Sistema de mensagens
+│   ├── rating/                # Sistema de classificações
+│   ├── tag/                   # Sistema de tags
+│   ├── filter/                # Filtros de conteúdo
+│   ├── lang/                  # Pacotes de idiomas
+│   ├── pix/                   # Imagens e ícones
+│   └── ...                    # Outros componentes
 │
-├── 📁 lib/                       # Biblioteca de configuração
+├── lib/                       # Biblioteca de configuração
 │   ├── 📄 setup.php              # Redirecionador para public/lib/setup.php
 │   ├── 📁 behat/                 # Testes BDD (Behat)
 │   └── 📁 ...                    # Outros componentes de biblioteca
