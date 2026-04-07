@@ -68,9 +68,9 @@ Para garantir uma instalação bem-sucedida do MoodleExt, certifique-se de que s
 
 ---
 
-## 🛠️ Instalação Completa
+## 🛠️ Instalação Completa.
 
-### Pré-requisitos de Sistema
+### Pré-requisitos de Sistema:
 
 1. **XAMPP** instalado (Apache + MariaDB + PHP)
 2. **Git** instalado para clonar o repositório
@@ -84,6 +84,7 @@ C:\xampp\xampp-control.exe
 ```
 
 Inicie os serviços:
+
 - ✅ Apache (porta 80)
 - ✅ MySQL (porta 3306)
 
