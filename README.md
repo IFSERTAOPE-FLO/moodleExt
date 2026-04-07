@@ -291,8 +291,6 @@ Se a senha não for solicitada, deixe `$CFG->dbpass = '';`
 - [ ] Instalador web finalizado
 - [ ] Login realizado com usuário administrador
 
-
-
 ---
 
 ## 🧱 Estrutura do Projeto:
