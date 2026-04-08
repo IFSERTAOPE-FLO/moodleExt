@@ -42,11 +42,11 @@ Este projeto demonstra conhecimentos em:
 
 As tecnologias e ferramentas utilizadas para o desenvolvimento e implantação do MoodleExt incluem:
 
-- PHP 8.2+
-- MariaDB 10.11+
-- Apache 2.4+
-- Composer
-- Moodle 5.1.3+
+- PHP 8.2+;
+- MariaDB 10.11+;
+- Apache 2.4+;
+- Composer;
+- Moodle 5.1.3+;
 
 ---
 
