@@ -36,7 +36,6 @@ Este projeto demonstra conhecimentos em:
 - Integração com banco de dados;
 - Customização de sistemas open source;
 
-
 ---
 
 ## 🚀 Tecnologias Utilizadas:
