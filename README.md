@@ -339,32 +339,32 @@ moodleExt/
 │   └── ...                    # Outros componentes
 │
 ├── lib/                       # Biblioteca de configuração
-│   ├── 📄 setup.php              # Redirecionador para public/lib/setup.php
-│   ├── 📁 behat/                 # Testes BDD (Behat)
-│   └── 📁 ...                    # Outros componentes de biblioteca
+│   ├── setup.php              # Redirecionador para public/lib/setup.php
+│   ├── behat/                 # Testes BDD (Behat)
+│   └── ...                    # Outros componentes de biblioteca
 │
-├── 📁 admin/                     # Scripts administrativos CLI
-│   └── 📁 cli/                   # Utilitários de linha de comando
-│       ├── 📄 install.php        # Instalação via CLI
-│       ├── 📄 upgrade.php        # Atualização via CLI
-│       ├── 📄 cron.php           # Tarefas agendadas
-│       └── 📄 ...                # Outros scripts
+├── admin/                     # Scripts administrativos CLI
+│   └── cli/                   # Utilitários de linha de comando
+│       ├──  install.php        # Instalação via CLI
+│       ├──  upgrade.php        # Atualização via CLI
+│       ├──  cron.php           # Tarefas agendadas
+│       └──  ...                # Outros scripts
 │
-├── 📁 vendor/                    # Dependências instaladas via Composer
-│   └── 📄 autoload.php           # Autoloader PSR-4
+├──  vendor/                    # Dependências instaladas via Composer
+│   └──  autoload.php           # Autoloader PSR-4
 │
-├── 📁 server/                    # Configurações de servidor
-│   └── 📁 mysql/                 # Scripts MySQL (opcional)
+├──  server/                    # Configurações de servidor
+│   └──  mysql/                 # Scripts MySQL (opcional)
 │
-├── 📁 Doc/                       # Documentação do projeto
-│   ├── 📄 INSTALL.txt            # Instruções de instalação
-│   ├── 📄 UPGRADING.md           # Guia de atualização
-│   ├── 📄 TRADEMARK.txt          # Marcas registradas
-│   └── 📁 configuracao/          # Documentação de configuração
+├──  Doc/                       # Documentação do projeto
+│   ├── INSTALL.txt            # Instruções de instalação
+│   ├── UPGRADING.md           # Guia de atualização
+│   ├── TRADEMARK.txt          # Marcas registradas
+│   └── configuracao/          # Documentação de configuração
 │
-└── 📁 .github/                   # Configurações GitHub
-    ├── 📁 workflows/             # GitHub Actions CI/CD
-    └── 📄 ...                    # Outros arquivos Git
+└── .github/                   # Configurações GitHub
+    ├──  workflows/             # GitHub Actions CI/CD
+    └──  ...                    # Outros arquivos Git
 ```
 
 ### 📋 Descrição dos Diretórios Principais
