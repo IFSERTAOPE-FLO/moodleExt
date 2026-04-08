@@ -385,7 +385,6 @@ Os diretórios foram organizados para separar claramente as responsabilidades e 
 O MoodleExt é um projeto de código aberto licenciado sob a [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html). Sinta-se à vontade para usar, modificar e distribuir o código, desde que respeite os termos da licença.
 Além disso, o projeto é mantido pela comunidade do IFSERTÃO-PE Campus Floresta, e contribuições são feitas de forma colaborativa para garantir a melhoria contínua do sistema.
 
-
 ## Desenvolvido por:
 
 Alunos do IFSERTÃO-PE Campus Floresta-PE, como parte de um projeto de extensão para a comunidade acadêmica. O MoodleExt é resultado de um esforço coletivo para criar uma solução educacional personalizada e eficiente, atendendo às necessidades específicas do instituto.
