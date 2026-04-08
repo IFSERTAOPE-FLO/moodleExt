@@ -389,4 +389,4 @@ Além disso, o projeto é mantido pela comunidade do IFSERTÃO-PE Campus Florest
 
 ## Desenvolvido por:
 
-Alunos do IFSERTÃO-PE Campus Floresta, como parte de um projeto de extensão para a comunidade acadêmica. O MoodleExt é resultado de um esforço coletivo para criar uma solução educacional personalizada e eficiente, atendendo às necessidades específicas do instituto.
+Alunos do IFSERTÃO-PE Campus Floresta-PE, como parte de um projeto de extensão para a comunidade acadêmica. O MoodleExt é resultado de um esforço coletivo para criar uma solução educacional personalizada e eficiente, atendendo às necessidades específicas do instituto.
