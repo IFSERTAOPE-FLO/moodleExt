@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://moodle.org" target="_blank" title="Moodle Website">
-    <img src="https://raw.githubusercontent.com/moodle/moodle/main/.github/moodlelogo.svg" alt="Moodle Logo" width="250">
+    <img src="https://raw.githubusercontent.com/moodle/moodle/main/.github/moodlelogo.svg" alt="Moodle Logo" width="400" height="250">
   </a>
 </p>
 
