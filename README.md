@@ -4,18 +4,18 @@
   </a>
 </p>
 
-<h1 align="center">MoodleExt</h1>
-
-<p align="center">
-  Sistema educacional customizado baseado no Moodle para gestão acadêmica no
-  <strong>IFSERTÃO-PE Campus Floresta</strong>. O mesmo foi desenvolvido como um projeto de extensão cujo o intuito era ajudar toda a comunidade acadêmica.
-</p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/PHP-8.2+-blue?style=for-the-badge&logo=php">
   <img src="https://img.shields.io/badge/MariaDB-10.11+-orange?style=for-the-badge&logo=mariadb">
   <img src="https://img.shields.io/badge/Apache-2.4+-red?style=for-the-badge&logo=apache">
   <img src="https://img.shields.io/badge/Composer-2.x-black?style=for-the-badge&logo=composer">
+</p>
+
+<h1 align="center">MoodleExt</h1>
+
+<p align="center">
+  Sistema educacional customizado baseado no Moodle para gestão acadêmica no
+  <strong>IFSERTÃO-PE Campus Floresta</strong>. O mesmo foi desenvolvido como um projeto de extensão cujo o intuito era ajudar toda a comunidade acadêmica.
 </p>
 
 ---
