@@ -39,7 +39,7 @@ Este projeto demonstra conhecimentos em:
 
 ---
 
-## �🚀 Tecnologias Utilizadas:
+## 🚀 Tecnologias Utilizadas:
 
 As tecnologias e ferramentas utilizadas para o desenvolvimento e implantação do MoodleExt incluem:
 
