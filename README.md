@@ -367,7 +367,9 @@ moodleExt/
     └──  ...                    # Outros arquivos Git
 ```
 
-### 📋 Descrição dos Diretórios Principais
+### 📋 Descrição dos Diretórios Principais:
+
+Os diretórios foram organizados para separar claramente as responsabilidades e facilitar a manutenção do código:
 
 | Diretório | Descrição |
 |-----------|-----------|
