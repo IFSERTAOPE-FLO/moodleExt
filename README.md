@@ -14,7 +14,7 @@
 <h1 align="center">MoodleExt: AVA IFPE - Campus Floresta</h1>
 
 <p align="center">
-  Sistema educacional customizado baseado no Moodle para gestão acadêmica no
+  Sistema educacional customizado baseado no Moodle para gestão acadêmica para
   <strong>IFSERTÃO-PE Campus Floresta</strong>. O mesmo foi desenvolvido como um projeto de extensão cujo o intuito era ajudar toda a comunidade acadêmica.
 </p>
 
