@@ -393,7 +393,7 @@ Alunos do IFSERTÃO-PE Campus Floresta-PE, como parte de um projeto de extensão
 
 ---
 
-<p>
+<p align="center">
 
 @2024 MoodleExt - Todos os direitos reservados. Desenvolvido por alunos do IFSERTÃO-PE Campus Floresta-PE.
 
