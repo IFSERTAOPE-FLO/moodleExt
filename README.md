@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Composer-2.x-black?style=for-the-badge&logo=composer">
 </p>
 
-<h1 align="center">MoodleExt</h1>
+<h1 align="center">MoodleExt: AVA IFPE - Campus Floresta</h1>
 
 <p align="center">
   Sistema educacional customizado baseado no Moodle para gestão acadêmica no
