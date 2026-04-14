@@ -61,7 +61,7 @@ Para garantir uma instalação bem-sucedida do MoodleExt, certifique-se de que s
 | Apache   | 2.4+         |
 | Composer | 2.x          |
 
-### Extensões PHP obrigatórias
+### Extensões PHP obrigatórias:
 
 `gd`, `intl`, `sodium`, `zip`, `soap`, `mbstring`, `curl`, `openssl`, `xmlreader`, `xml`, `json`, `fileinfo`, `ctype`, `dom`, `simplexml`, `pcre`, `spl`, `filter`, `hash`, `iconv`, `zlib`
 
