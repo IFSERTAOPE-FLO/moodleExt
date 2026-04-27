@@ -19,9 +19,9 @@ O MoodleExt é construído sobre a arquitetura **LAMP/WAMP** (Linux/Windows, Apa
 
 O projeto utiliza o **Grunt** para processar arquivos de estilo e scripts modernos. O fluxo segue o padrão:
 
-1.  **Sass (SCSS):** Localizados nas pastas de temas (ex: `public/theme/boost/scss/`). São compilados em CSS puro para o navegador.
-2.  **JavaScript (AMD/ESM):** Scripts modernos são processados para garantir compatibilidade com o sistema de módulos do Moodle (RequireJS).
-3.  **Mustache Templates:** Utilizados para renderizar a interface de forma desacoplada da lógica PHP.
+1. **Sass (SCSS):** Localizados nas pastas de temas (ex: `public/theme/boost/scss/`). São compilados em CSS puro para o navegador.
+2. **JavaScript (AMD/ESM):** Scripts modernos são processados para garantir compatibilidade com o sistema de módulos do Moodle (RequireJS).
+3. **Mustache Templates:** Utilizados para renderizar a interface de forma desacoplada da lógica PHP.
 
 ---
 
@@ -29,17 +29,17 @@ O projeto utiliza o **Grunt** para processar arquivos de estilo e scripts modern
 
 Para aumentar a segurança, o projeto utiliza uma **raiz pública segregada**:
 
-*   **`moodleExt/` (Raiz):** Contém arquivos sensíveis como `config.php`, dependências `vendor/` e scripts CLI. Esta pasta **NÃO** deve ser exposta diretamente ao servidor web.
-*   **`public/` (Web Root):** Única pasta visível via HTTP. Contém o `index.php` principal e todos os ativos acessíveis ao usuário.
+* **`moodleExt/` (Raiz):** Contém arquivos sensíveis como `config.php`, dependências `vendor/` e scripts CLI. Esta pasta **NÃO** deve ser exposta diretamente ao servidor web.
+* **`public/` (Web Root):** Única pasta visível via HTTP. Contém o `index.php` principal e todos os ativos acessíveis ao usuário.
 
 ---
 
 ## 🔄 Fluxo de Dados (Requisição Típica)
 
-1.  O usuário acessa `http://localhost/moodleExt/`.
-2.  O `index.php` na raiz redireciona para `public/`.
-3.  O `public/index.php` carrega o arquivo `config.php` (da raiz) para estabelecer conexão com o banco e carregar as bibliotecas core (`lib/`).
-4.  O Moodle identifica o roteamento, carrega os plugins necessários e renderiza o template Mustache correspondente através do motor de temas.
+1. O usuário acessa `http://localhost/moodleExt/`.
+2. O `index.php` na raiz redireciona para `public/`.
+3. O `public/index.php` carrega o arquivo `config.php` (da raiz) para estabelecer conexão com o banco e carregar as bibliotecas core (`lib/`).
+4. O Moodle identifica o roteamento, carrega os plugins necessários e renderiza o template Mustache correspondente através do motor de temas.
 
 ---
 
@@ -47,9 +47,9 @@ Para aumentar a segurança, o projeto utiliza uma **raiz pública segregada**:
 
 O MoodleExt mantém o core do Moodle o mais limpo possível, preferindo extensões via:
 
-*   **Local Plugins (`local/`):** Para funcionalidades gerais do sistema.
-*   **Themes (`theme/`):** Para toda a identidade visual e experiência do usuário (UX).
-*   **Blocks (`blocks/`):** Para widgets de interface (ex: painel de gamificação).
+* **Local Plugins (`local/`):** Para funcionalidades gerais do sistema.
+* **Themes (`theme/`):** Para toda a identidade visual e experiência do usuário (UX).
+* **Blocks (`blocks/`):** Para widgets de interface (ex: painel de gamificação).
 
 ---
 *Última atualização: Abril de 2026*
