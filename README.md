@@ -122,7 +122,7 @@ echo 'Banco criado com sucesso!';
 copy config-dist.php config.php
 ```
 
-Edite `config.php` com as seguintes configurações:
+Edite `config.php` with as seguintes configurações:
 
 ```php
 <?php
@@ -354,7 +354,15 @@ moodleExt/
 │
 ├──  server/                    # Configurações de servidor
 │   └──  mysql/                 # Scripts MySQL (opcional)
-
+│
+├──  Doc/                       # Documentação do projeto
+│   ├── 01-projeto/            # Contexto e visão geral
+│   ├── 02-requisitos/         # Requisitos funcionais e pedagógicos
+│   ├── 03-telas/              # Documentação de interfaces
+│   ├── 04-setup/              # Guias de instalação e configuração
+│   └── 05-guia/               # Convenções e padrões de desenvolvimento
+│
+└── .github/                   # Configurações GitHub
     ├──  workflows/             # GitHub Actions CI/CD
     └──  ...                    # Outros arquivos Git
 ```
@@ -369,7 +377,7 @@ Os diretórios foram organizados para separar claramente as responsabilidades e 
 | `lib/` | **Biblioteca do sistema** - Código de suporte e inicialização. |
 | `admin/cli/` | **Scripts administrativos** - Utilitários para instalação, atualização e manutenção. |
 | `vendor/` | **Dependências Composer** - Bibliotecas PHP externas. |
-| `Doc/` | **Documentação** - Guias de instalação e configuração. |
+| `Doc/` | **Documentação** - Documentação técnica, funcional e visual. |
 
 ---
 
