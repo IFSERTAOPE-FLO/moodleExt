@@ -57,6 +57,9 @@ O **MoodleExt** é uma adaptação estratégica do Moodle 5.1.3+, desenvolvida c
 | **📊 Gestão Centralizada** | Controle total de cursos, notas e frequência em um só lugar. |
 | **💬 Comunicação** | Sistema interno de mensagens e notificações em tempo real. |
 | **📱 Responsividade** | Acesso garantido via desktop, tablets e smartphones. |
+| **♿ Acessibilidade** | Auditoria automática via **Brickfield** para inclusão digital. |
+| **🤖 Analytics** | Modelos de predição para identificação de alunos em risco. |
+| **🔐 Privacidade** | Gestão completa de dados e conformidade com a LGPD/GDPR. |
 
 ---
 
@@ -64,11 +67,11 @@ O **MoodleExt** é uma adaptação estratégica do Moodle 5.1.3+, desenvolvida c
 
 O projeto utiliza uma stack robusta e atualizada para garantir performance e segurança:
 
-- **Linguagem:** PHP 8.2+
-- **Banco de Dados:** MariaDB 10.11+
-- **Servidor Web:** Apache 2.4+
-- **Build System:** Node.js + Grunt + Sass
-- **Gerenciador:** Composer 2.x
+- **Linguagem:** ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) `8.2+`
+- **Banco de Dados:** ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white) `10.11+`
+- **Servidor Web:** ![Apache](https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white) `2.4+`
+- **Build System:** ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) + ![Grunt](https://img.shields.io/badge/Grunt-FBA919?style=flat-square&logo=grunt&logoColor=white) + ![Sass](https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=sass&logoColor=white)
+- **Gerenciador:** ![Composer](https://img.shields.io/badge/Composer-885630?style=flat-square&logo=composer&logoColor=white) `2.x`
 
 ---
 
@@ -76,10 +79,10 @@ O projeto utiliza uma stack robusta e atualizada para garantir performance e seg
 
 Para rodar o projeto localmente, você precisará de:
 
-- **XAMPP** (Apache + MariaDB + PHP)
-- **Git**
-- **Composer** (Global)
-- **Node.js** (Para compilação de assets)
+- ![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=flat-square&logo=xampp&logoColor=white) **XAMPP** (Apache + MariaDB + PHP)
+- ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) **Git**
+- ![Composer](https://img.shields.io/badge/Composer-885630?style=flat-square&logo=composer&logoColor=white) **Composer** (Global)
+- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) **Node.js** (Para compilação de assets)
 
 <details>
 <summary><b>🔍 Ver Extensões PHP obrigatórias</b></summary>
@@ -163,13 +166,48 @@ Abaixo, a organização simplificada dos diretórios:
 
 ```bash
 moodleExt/
-├── public/                 # Raiz web pública (CSS, JS, Temas)
-├── admin/                  # Ferramentas administrativas CLI
-├── lib/                    # Core da aplicação
+├── .github/                # Automação CI/CD e políticas do GitHub
+├── .grunt/                 # Scripts de build e automação (JS/Sass)
+├── admin/cli/              # Ferramentas administrativas de linha de comando
+├── Doc/                    # Documentação completa do projeto ⬅️
+│   ├── 01-projeto/         # Contexto e Identidade Visual
+│   ├── 02-requisitos/      # Requisitos Funcionais e Técnicos
+│   ├── 03-telas/           # Protótipos e Guia de Interface
+│   ├── 04-setup/           # Guias de Instalação e Upgrade
+│   └── 05-guia/            # Padrões de Desenvolvimento
+├── lib/                    # Bibliotecas core e Behat
+├── public/                 # Raiz do servidor web (Interface e Assets)
+├── tool/                   # Ferramentas administrativas (Analytics, Acessibilidade)
 ├── vendor/                 # Dependências PHP (Composer)
-├── Doc/                    # Documentação do Projeto ⬅️
 └── README.md               # Este arquivo
 ```
+
+---
+
+## 🛠️ Ferramentas Administrativas:
+
+O MoodleExt inclui ferramentas avançadas para gestão do ambiente:
+
+- **Brickfield Accessibility:** Auditoria automática de acessibilidade em todo o conteúdo.
+- **Learning Plans (LP):** Gestão de planos de aprendizagem baseados em competências.
+- **Data Privacy:** Painel para gestão de solicitações de dados e conformidade legal.
+- **Analytics Models:** Sistema de predição para evitar a evasão escolar.
+- **Component Library:** Biblioteca de componentes UI para desenvolvedores.
+
+---
+
+## 💻 Comandos Úteis (CLI):
+
+Para tarefas de manutenção, utilize os scripts em `admin/cli/`:
+
+| Comando | Descrição |
+| :--- | :--- |
+| `php admin/cli/cron.php` | Executa as tarefas agendadas do sistema. |
+| `php admin/cli/purge_caches.php` | Limpa todos os caches do sistema. |
+| `php admin/cli/upgrade.php` | Realiza o upgrade da base de dados via terminal. |
+| `php admin/cli/check_database_schema.php` | Verifica a integridade do esquema do banco. |
+| `php admin/cli/maintenance.php --enable` | Coloca o site em modo de manutenção. |
+
 
 ---
 
@@ -182,6 +220,17 @@ A documentação detalhada foi organizada em módulos para facilitar a consulta:
 3. [**03-Telas:**](Doc/03-telas/) Guia de interfaces e protótipos.
 4. [**04-Setup:**](Doc/04-setup/) Instruções técnicas avançadas.
 5. [**05-Guia:**](Doc/05-guia/) Padrões de código e convenções de commit.
+
+---
+
+## 🤝 Contribuição:
+
+Contribuições são bem-vindas! Para garantir a organização, siga estas diretrizes:
+
+1.  **Padrão de Commits:** Utilize mensagens claras seguindo o [Guia de Commits](Doc/05-guia/padrao-commits.md).
+2.  **Pull Requests:** Documente bem suas alterações e verifique se os testes básicos foram aprovados.
+3.  **Issue Tracking:** Reporte bugs ou sugira melhorias via GitHub Issues.
+
 
 ---
 
