@@ -23,7 +23,7 @@
 
 ---
 
-## 📖 Sumário
+## 📖 Sumário:
 
 - [📌 Sobre o Projeto](#-sobre-o-projeto)
 - [🚀 Recursos Principais](#-recursos-principais)
@@ -40,14 +40,15 @@
 
 O **MoodleExt** é uma adaptação estratégica do Moodle 5.1.3+, desenvolvida como um projeto de extensão universitária. O foco principal é criar um ecossistema digital que atenda às demandas específicas da comunidade acadêmica, promovendo organização, inclusão digital e inovação pedagógica.
 
-### Visão Geral
+### Visão Geral:
+
 - **Público:** Estudantes, Professores e Servidores.
 - **Base:** Moodle LMS 5.1 (Open Source).
 - **Finalidade:** Extensão universitária e impacto social.
 
 ---
 
-## 🚀 Recursos Principais
+## 🚀 Recursos Principais:
 
 | Recurso | Descrição |
 | :--- | :--- |
@@ -59,7 +60,7 @@ O **MoodleExt** é uma adaptação estratégica do Moodle 5.1.3+, desenvolvida c
 
 ---
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias:
 
 O projeto utiliza uma stack robusta e atualizada para garantir performance e segurança:
 
