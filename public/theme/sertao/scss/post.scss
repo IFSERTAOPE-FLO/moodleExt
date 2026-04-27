@@ -1,0 +1,299 @@
+/**
+ * Sertão Conecta - Design Tokens (Baseado no Logotipo)
+ */
+$primary-color: #006437;    // Verde Escuro (Sertão)
+$secondary-color: #69a531;  // Verde Claro (Conecta)
+$accent-color: #ffc107;     // Amarelo (Sol)
+$dark-bg: #1a1a1a;
+$text-light: #ffffff;
+$text-muted: #6c757d;
+
+// Transitions
+$smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Typography
+
+body.theme-sertao {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+    color: #333;
+    background-color: #fff !important;
+
+    // Navbar Customizations
+    .landing-navbar {
+        padding: 1.2rem 0;
+        transition: $smooth;
+        z-index: 1050;
+        
+        &.scrolled {
+            background: rgba(0, 100, 55, 0.95) !important; // $primary-color with opacity
+            backdrop-filter: blur(15px);
+            padding: 0.6rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: $text-light !important;
+            img {
+                transition: transform 0.3s ease;
+                &:hover { transform: scale(1.05); }
+            }
+        }
+        
+        .nav-link {
+            font-weight: 600;
+            margin: 0 12px;
+            color: rgba($text-light, 0.9) !important;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: $accent-color;
+                transition: $smooth;
+                transform: translateX(-50%);
+            }
+            &:hover {
+                color: $accent-color !important;
+                &:after { width: 80%; }
+            }
+        }
+    }
+
+    // Hero Section
+    .hero-section {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #006437 0%, #004d2a 100%) !important;
+        position: relative;
+        padding-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 800 !important;
+            line-height: 1.1;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            color: #fff !important;
+            
+            b {
+                color: #ffc107 !important;
+                position: relative;
+                display: inline-block;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0;
+                    width: 100%;
+                    height: 8px;
+                    background: rgba(#ffc107, 0.3);
+                    z-index: -1;
+                }
+            }
+        }
+        
+        .lead {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9) !important;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+
+    // Buttons
+    .btn {
+        border-radius: 12px;
+        padding: 12px 28px;
+        font-size: 1rem;
+        transition: $smooth;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+        background-color: #69a531 !important;
+        border-color: #69a531 !important;
+        color: #fff !important;
+        &:hover {
+            background-color: #5a8d29 !important;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(105, 165, 49, 0.4);
+        }
+    }
+
+    .btn-accent {
+        background-color: #ffc107 !important;
+        border-color: #ffc107 !important;
+        color: #000 !important;
+        &:hover {
+            background-color: #e6ae06 !important;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+        }
+    }
+
+    .btn-glow {
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(45deg);
+            transition: 0.6s;
+            pointer-events: none;
+        }
+        &:hover::after {
+            left: 120%;
+        }
+    }
+
+    // Course Cards
+    .course-card {
+        border-radius: 24px !important;
+        overflow: hidden;
+        background: #fff;
+        border: none !important;
+        transition: $smooth;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+        
+        .course-img-wrapper {
+            height: 220px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s ease;
+            }
+        }
+        
+        &:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12) !important;
+            img { transform: scale(1.1); }
+        }
+    }
+
+    // Metrics
+    .metric-card {
+        background: #fff;
+        padding: 40px;
+        border-radius: 30px;
+        border: 1px solid rgba(0,0,0,0.04);
+        transition: $smooth;
+        
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #006437 !important;
+            margin: 15px 0;
+        }
+        
+        i {
+            font-size: 3.5rem;
+            color: #006437 !important;
+            opacity: 0.8;
+        }
+        
+        &:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+        }
+    }
+
+    // Section Headers
+    section h2 {
+        font-weight: 800;
+        color: #006437 !important;
+        margin-bottom: 3rem;
+        position: relative;
+        display: inline-block;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            width: 60px;
+            height: 4px;
+            background: #ffc107 !important;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+    }
+
+    // Courses Section
+    .courses-section {
+        background-color: #ffffff;
+        .card-title {
+            color: #006437 !important;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .btn-outline-primary {
+            border-color: #69a531 !important;
+            color: #69a531 !important;
+            &:hover {
+                background-color: #69a531 !important;
+                color: #fff !important;
+            }
+        }
+    }
+
+    // About Section
+    .about-section {
+        background-color: #f8fcf9 !important; // Very light green
+        li {
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #444;
+        }
+    }
+
+    // Footer
+    footer {
+        background-color: #00331c !important; // Deeper green
+        h5, h6 {
+            color: #ffc107 !important;
+        }
+        .text-muted {
+            color: rgba(255,255,255,0.6) !important;
+        }
+        .text-reset:hover {
+            color: #ffc107 !important;
+            text-decoration: none;
+        }
+    }
+
+    // Logo Fallback
+    .logo-text {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #fff !important;
+        letter-spacing: -1px;
+        b { color: #ffc107 !important; }
+    }
+}

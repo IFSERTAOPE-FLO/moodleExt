@@ -47,4 +47,11 @@ $CFG->directorypermissions = 02777;
 
 $CFG->admin = 'admin';
 
+//=========================================================================
+// 7. DEBUGGING (ENABLE FOR THEME DEVELOPMENT)
+//=========================================================================
+$CFG->debug = (E_ALL | E_STRICT);
+$CFG->debugdisplay = 1;
+$CFG->themedesignermode = 1;
+
 require_once(__DIR__ . '/lib/setup.php');

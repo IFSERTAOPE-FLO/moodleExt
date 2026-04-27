@@ -123,7 +123,7 @@ Doc/
 │
 ├── 03-telas/               ← Documentação de interfaces
 │   ├── externas/           ← Landing page, Login, Cadastro
-│   │   ├── site-institucional.md
+│   │   ├── pagina-inicial.md
 │   │   ├── login.md
 │   │   └── cadastro.md
 │   └── internas/           ← Dashboard e Ambiente de Aula
@@ -198,7 +198,7 @@ O MoodleExt é desenvolvido por **alunos do IFSERTÃO-PE Campus Floresta-PE** co
 
 ## ⚖️ Licença
 
-Este projeto é licenciado sob a **GNU General Public License v3.0 (GPLv3)**.
+Este projeto é licensed sob a **GNU General Public License v3.0 (GPLv3)**.
 
 A GPLv3 garante que o MoodleExt possa ser usado, estudado, modificado e distribuído livremente por qualquer pessoa, desde que as modificações também sejam distribuídas sob os mesmos termos.
 
