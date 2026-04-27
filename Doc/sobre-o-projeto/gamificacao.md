@@ -10,17 +10,19 @@ O sistema é sustentado por plugins que implementam mecânicas fundamentais:
 - **Stash**: Introduz elementos de exploração, missões, coleta de itens e construção de coleções, aumentando o engajamento pela curiosidade.
 - **Completion Progress**: Organiza o percurso do aluno visualmente por meio de trilhas e desafios, reduzindo a desorientação.
 
-## Atividades Gamificadas
+## Atividades Gamificadas:
+
 Diferentes tipos de atividades interativas são incorporadas:
 
-1.  **Questionários (Quiz)**: Principal ferramenta de avaliação com feedback imediato.
-2.  **Lição Interativa**: Aprendizagem baseada em tentativa e erro, simulando mecânicas de jogos.
-3.  **Game Module Plugin**: Jogos como cruzadinhas, caça-palavras e anagramas para fixação lúdica.
-4.  **H5P**: Atividades como associação de termos, flashcards, jogos de memória e quebra-cabeças.
-5.  **Preenchimento de Lacunas**: Reforça a prática e aplicação ativa do conhecimento.
+1.**Questionários (Quiz)**: Principal ferramenta de avaliação com feedback imediato.
+2.**Lição Interativa**: Aprendizagem baseada em tentativa e erro, simulando mecânicas de jogos.
+3.**Game Module Plugin**: Jogos como cruzadinhas, caça-palavras e anagramas para fixação lúdica.
+4.**H5P**: Atividades como associação de termos, flashcards, jogos de memória e quebra-cabeças.
+5.**Preenchimento de Lacunas**: Reforça a prática e aplicação ativa do conhecimento.
 
-## Integração e Experiência
+## Integração e Experiência:
 A lógica de gamificação transforma a estrutura do curso:
+
 - **Atividades** em **Missões**
 - **Módulos** em **Fases**
 - **Cursos** em **Jornadas**
