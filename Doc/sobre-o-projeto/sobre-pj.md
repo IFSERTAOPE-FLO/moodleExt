@@ -115,8 +115,15 @@ Doc/
 │   ├── sobre-pj.md
 │   ├── identidade-visual.md
 │   ├── gamificacao.md
-│   ├── interface-wireframes.md
 │   └── modelo-padrao-curso.md
+│
+├── telas/                  ← Documentação de interfaces
+│   ├── externas/           ← Landing page, Login, Cadastro
+│   │   ├── site-institucional.md
+│   │   ├── login.md
+│   │   └── cadastro.md
+│   └── internas/           ← Dashboard e Ambiente de Aula
+│       └── dashboard-curso.md
 │
 ├── instalacao/             ← Guias de instalação do ambiente
 │   ├── INSTALL.txt
