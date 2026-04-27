@@ -46,6 +46,7 @@ Para aumentar a segurança, o projeto utiliza uma **raiz pública segregada**:
 ## 🧩 Customizações e Plugins
 
 O MoodleExt mantém o core do Moodle o mais limpo possível, preferindo extensões via:
+
 *   **Local Plugins (`local/`):** Para funcionalidades gerais do sistema.
 *   **Themes (`theme/`):** Para toda a identidade visual e experiência do usuário (UX).
 *   **Blocks (`blocks/`):** Para widgets de interface (ex: painel de gamificação).
