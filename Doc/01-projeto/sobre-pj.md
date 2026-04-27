@@ -111,13 +111,17 @@ A documentação do projeto está organizada nas seguintes pastas:
 
 ```
 Doc/
-├── sobre-o-projeto/        ← [VOCÊ ESTÁ AQUI] Contexto e visão geral
+├── 01-projeto/             ← [VOCÊ ESTÁ AQUI] Contexto e visão geral
 │   ├── sobre-pj.md
 │   ├── identidade-visual.md
 │   ├── gamificacao.md
 │   └── modelo-padrao-curso.md
 │
-├── telas/                  ← Documentação de interfaces
+├── 02-requisitos/          ← Requisitos do sistema e pedagógicos
+│   ├── requisitos-gerais.md
+│   └── requisitos-cursos.md
+│
+├── 03-telas/               ← Documentação de interfaces
 │   ├── externas/           ← Landing page, Login, Cadastro
 │   │   ├── site-institucional.md
 │   │   ├── login.md
@@ -125,17 +129,13 @@ Doc/
 │   └── internas/           ← Dashboard e Ambiente de Aula
 │       └── dashboard-curso.md
 │
-├── instalacao/             ← Guias de instalação do ambiente
+├── 04-setup/               ← Guias de instalação do ambiente
 │   ├── INSTALL.txt
 │   ├── UPGRADING.md
 │   └── TRADEMARK.txt
 │
-├── requisitos/             ← Requisitos do sistema e pedagógicos
-│   ├── requisitos-gerais.md
-│   └── requisitos-cursos.md
-│
-├── importante/             ← Convenções e guias da equipe
-│   └── padrao-commits.md
+└── 05-guia/                ← Convenções e padrões da equipe
+    └── padrao-commits.md
 ```
 
 ---
