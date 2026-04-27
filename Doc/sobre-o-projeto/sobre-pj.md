@@ -112,20 +112,23 @@ A documentação do projeto está organizada nas seguintes pastas:
 ```
 Doc/
 ├── sobre-o-projeto/        ← [VOCÊ ESTÁ AQUI] Contexto e visão geral
-│   └── sobre-pj.md
+│   ├── sobre-pj.md
+│   ├── identidade-visual.md
+│   ├── gamificacao.md
+│   ├── interface-wireframes.md
+│   └── modelo-padrao-curso.md
 │
 ├── instalacao/             ← Guias de instalação do ambiente
-│   ├── INSTALL.txt         ← Resumo rápido de instalação (Moodle base)
-│   ├── UPGRADING.md        ← Histórico e procedimentos de upgrade
-│   └── TRADEMARK.txt       ← Informações de marca registrada
+│   ├── INSTALL.txt
+│   ├── UPGRADING.md
+│   └── TRADEMARK.txt
 │
-├── requisitos/             ← Requisitos do sistema
-│   └── requisitos-gerais.md
+├── requisitos/             ← Requisitos do sistema e pedagógicos
+│   ├── requisitos-gerais.md
+│   └── requisitos-cursos.md
 │
 ├── importante/             ← Convenções e guias da equipe
-│   └── padrao-commits.md   ← Padrão Conventional Commits
-│
-└── folder/                 ← (Reservado para uso futuro)
+│   └── padrao-commits.md
 ```
 
 ---
@@ -159,7 +162,8 @@ git commit -m "docs: atualiza guia de instalação para Windows 11"
 Com base no Moodle como plataforma-base, o MoodleExt visa disponibilizar:
 
 - **Gestão de Cursos** — Criação, organização e controle de acesso a cursos e disciplinas;
-- **Atividades e Avaliações** — Fóruns, quizzes, tarefas, diários e muito mais;
+- **Gamificação (Sertão Conecta)** — Sistema de XP, níveis, insígnias e missões para engajamento;
+- **Atividades e Avaliações** — Fóruns, quizzes, tarefas, H5P e jogos educacionais;
 - **Sistema de Notas** — Lançamento e acompanhamento de notas por curso;
 - **Mensagens e Notificações** — Comunicação interna entre alunos e professores;
 - **Relatórios Acadêmicos** — Acompanhamento de frequência e conclusão de atividades;
