@@ -177,15 +177,15 @@ moodleExt/
 
 A documentação detalhada foi organizada em módulos para facilitar a consulta:
 
-1.  [**01-Projeto:**](Doc/01-projeto/) Contexto, identidade visual e visão geral.
-2.  [**02-Requisitos:**](Doc/02-requisitos/) Regras de negócio e requisitos técnicos.
-3.  [**03-Telas:**](Doc/03-telas/) Guia de interfaces e protótipos.
-4.  [**04-Setup:**](Doc/04-setup/) Instruções técnicas avançadas.
-5.  [**05-Guia:**](Doc/05-guia/) Padrões de código e convenções de commit.
+1. [**01-Projeto:**](Doc/01-projeto/) Contexto, identidade visual e visão geral.
+2. [**02-Requisitos:**](Doc/02-requisitos/) Regras de negócio e requisitos técnicos.
+3. [**03-Telas:**](Doc/03-telas/) Guia de interfaces e protótipos.
+4. [**04-Setup:**](Doc/04-setup/) Instruções técnicas avançadas.
+5. [**05-Guia:**](Doc/05-guia/) Padrões de código e convenções de commit.
 
 ---
 
-## ⚖️ Licença
+## ⚖️ Licença:
 
 Este projeto está sob a licença **GNU General Public License v3.0 (GPLv3)**. Consulte o arquivo [COPYING.txt](COPYING.txt) para mais detalhes.
 
@@ -193,4 +193,9 @@ Este projeto está sob a licença **GNU General Public License v3.0 (GPLv3)**. C
 
 <p align="center">
   <b>Desenvolvido por alunos do IFSERTÃO-PE Campus Floresta · @2026</b>
+</p>
+<p align="center">
+Time de Desenvolvimento: 
+  - Victor Kauê
+  - Giselle Souza
 </p>
