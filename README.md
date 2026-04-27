@@ -244,7 +244,6 @@ Contribuições são bem-vindas! Para garantir a organização, siga estas diret
 2. **Pull Requests:** Documente bem suas alterações e verifique se os testes básicos foram aprovados.
 3. **Issue Tracking:** Reporte bugs ou sugira melhorias via GitHub Issues.
 
-
 ---
 
 ## ⚖️ Licença:
