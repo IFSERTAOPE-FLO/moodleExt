@@ -14,7 +14,8 @@
   <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge">
 </p>
 
-<h1 align="center">🎓 MoodleExt</h1>
+<h1 align="center">🎓 MoodleExt - Sertão Conecta</h1>
+
 <p align="center"><strong>Ambiente Virtual de Aprendizagem Customizado — IFSERTÃO-PE Campus Floresta</strong></p>
 
 <p align="center">
@@ -97,6 +98,7 @@ Para rodar o projeto localmente, você precisará de:
 Abaixo, os passos para configurar o ambiente de desenvolvimento.
 
 <details>
+
 <summary><b>🚀 Passo a Passo Completo (9 Etapas)</b></summary>
 
 ### 1. Iniciar XAMPP:
@@ -120,6 +122,7 @@ C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE IF NOT EXISTS moodleext
 ### 4. Configurar Arquivo config.php:
 
 Copie o modelo padrão:
+
 ```bash
 copy config-dist.php config.php
 ```
@@ -129,6 +132,7 @@ copy config-dist.php config.php
 
 ```bash
 mkdir C:\moodledata
+
 ```
 *Certifique-se de que o Apache tem permissão de escrita nesta pasta.*
 
@@ -142,6 +146,7 @@ npm install
 ### 7. Configurar Redirecionamento:
 
 Garanta que o `index.php` na raiz redireciona para `public/`:
+
 ```php
 header('Location: public/', true, 301);
 ```
@@ -166,19 +171,27 @@ Abaixo, a organização simplificada dos diretórios:
 
 ```bash
 moodleExt/
-├── .github/                # Automação CI/CD e políticas do GitHub
-├── .grunt/                 # Scripts de build e automação (JS/Sass)
-├── admin/cli/              # Ferramentas administrativas de linha de comando
-├── Doc/                    # Documentação completa do projeto ⬅️
-│   ├── 01-projeto/         # Contexto e Identidade Visual
-│   ├── 02-requisitos/      # Requisitos Funcionais e Técnicos
-│   ├── 03-telas/           # Protótipos e Guia de Interface
-│   ├── 04-setup/           # Guias de Instalação e Upgrade
-│   └── 05-guia/            # Padrões de Desenvolvimento
-├── lib/                    # Bibliotecas core e Behat
-├── public/                 # Raiz do servidor web (Interface e Assets)
-├── tool/                   # Ferramentas administrativas (Analytics, Acessibilidade)
-├── vendor/                 # Dependências PHP (Composer)
+├── .github/
+│   ├── workflows/          # Workflows de CI/CD (Push, Tests, Deploy)
+│   └── SECURITY.md         # Políticas de Segurança
+├── .grunt/                 # Configurações de Build (Sass, JS, Linting)
+├── admin/cli/              # Scripts de terminal (Cron, Cache, Purge, Upgrade)
+├── Doc/                    # Documentação do Projeto ⬅️
+│   ├── 01-projeto/         # Identidade Visual, Gamificação e Conceito
+│   ├── 02-requisitos/      # Especificações Técnicas e de Negócio
+│   ├── 03-telas/           # Mockups e Protótipos (Auth, Dashboard)
+│   ├── 04-setup/           # Manuais de Instalação e Configuração
+│   └── 05-guia/            # Padrões de Desenvolvimento e Commits
+├── lib/                    # Core do Moodle e Extensões de Teste (Behat)
+├── public/                 # Raiz do Servidor Web (Interface do Usuário)
+│   ├── admin/              # Administração via Web
+│   └── theme/              # Temas Customizados (Identidade IFSERTÃO)
+├── tool/                   # Ferramentas Internas Avançadas
+│   ├── analytics/          # Predição de Risco e IA
+│   ├── brickfield/         # Auditoria de Acessibilidade
+│   ├── componentlibrary/   # Biblioteca de UI (Mustache/Sass)
+│   └── dataprivacy/        # Conformidade LGPD/GDPR
+├── vendor/                 # Dependências de Backend (Composer)
 └── README.md               # Este arquivo
 ```
 
@@ -227,9 +240,9 @@ A documentação detalhada foi organizada em módulos para facilitar a consulta:
 
 Contribuições são bem-vindas! Para garantir a organização, siga estas diretrizes:
 
-1.  **Padrão de Commits:** Utilize mensagens claras seguindo o [Guia de Commits](Doc/05-guia/padrao-commits.md).
-2.  **Pull Requests:** Documente bem suas alterações e verifique se os testes básicos foram aprovados.
-3.  **Issue Tracking:** Reporte bugs ou sugira melhorias via GitHub Issues.
+1. **Padrão de Commits:** Utilize mensagens claras seguindo o [Guia de Commits](Doc/05-guia/padrao-commits.md).
+2. **Pull Requests:** Documente bem suas alterações e verifique se os testes básicos foram aprovados.
+3. **Issue Tracking:** Reporte bugs ou sugira melhorias via GitHub Issues.
 
 
 ---
@@ -241,10 +254,10 @@ Este projeto está sob a licença **GNU General Public License v3.0 (GPLv3)**. C
 ---
 
 <p align="center">
-  <b>Desenvolvido por alunos do IFSERTÃO-PE Campus Floresta · @2026</b>
+  <b>Desenvolvido por alunos do IFSERTÃO-PE Campus Floresta · © 2026</b>
 </p>
+
 <p align="center">
-Time de Desenvolvimento: 
-  - Victor Kauê
-  - Giselle Souza
+  🚀 <b>Time de Desenvolvimento:</b><br>
+  Victor Kauê &nbsp;•&nbsp; Giselle Souza
 </p>
