@@ -180,11 +180,11 @@ moodleExt/
 ├── .grunt/                 # Configurações de Build (Sass, JS, Linting)
 ├── admin/cli/              # Scripts de terminal (Cron, Cache, Purge, Upgrade)
 ├── Doc/                    # Documentação do Projeto ⬅️
-│   ├── 01-projeto/         # Identidade Visual, Gamificação e Conceito
+│   ├── 01-projeto/         # Identidade, Arquitetura, Roadmap e Glossário
 │   ├── 02-requisitos/      # Especificações Técnicas e de Negócio
 │   ├── 03-telas/           # Mockups e Protótipos (Auth, Dashboard)
 │   ├── 04-setup/           # Manuais de Instalação e Configuração
-│   └── 05-guia/            # Padrões de Desenvolvimento e Commits
+│   └── 05-guia/            # Desenvolvimento, Padrões e Commits
 ├── lib/                    # Core do Moodle e Extensões de Teste (Behat)
 ├── public/                 # Raiz do Servidor Web (Interface do Usuário)
 │   ├── admin/              # Administração via Web
@@ -231,11 +231,11 @@ Para tarefas de manutenção, utilize os scripts em `admin/cli/`:
 
 A documentação detalhada foi organizada em módulos para facilitar a consulta:
 
-1. [**01-Projeto:**](Doc/01-projeto/) Contexto, identidade visual e visão geral.
+1. [**01-Projeto:**](Doc/01-projeto/) Contexto, [Arquitetura](Doc/01-projeto/arquitetura.md), [Roadmap](Doc/01-projeto/roadmap.md) e [Glossário](Doc/01-projeto/glossario.md).
 2. [**02-Requisitos:**](Doc/02-requisitos/) Regras de negócio e requisitos técnicos.
 3. [**03-Telas:**](Doc/03-telas/) Guia de interfaces e protótipos.
 4. [**04-Setup:**](Doc/04-setup/) Instruções técnicas avançadas.
-5. [**05-Guia:**](Doc/05-guia/) Padrões de código e convenções de commit.
+5. [**05-Guia:**](Doc/05-guia/) [Guia de Desenvolvimento](Doc/05-guia/desenvolvimento.md) e Padrões de Commit.
 
 ---
 
