@@ -89,66 +89,75 @@ Para rodar o projeto localmente, você precisará de:
 
 ---
 
-## 📦 Instalação
+## 📦 Instalação:
 
 Abaixo, os passos para configurar o ambiente de desenvolvimento.
 
 <details>
 <summary><b>🚀 Passo a Passo Completo (9 Etapas)</b></summary>
 
-### 1. Iniciar XAMPP
+### 1. Iniciar XAMPP:
+
 Inicie o **Apache** e o **MySQL** via XAMPP Control Panel.
 
-### 2. Clonar o Repositório
+### 2. Clonar o Repositório:
+
 ```bash
 cd C:\xampp\htdocs
 git clone https://github.com/IFSERTAOPE-FLO/moodleExt.git
 cd moodleExt
 ```
 
-### 3. Criar Banco de Dados
+### 3. Criar Banco de Dados:
+
 ```bash
 C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE IF NOT EXISTS moodleext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 ```
 
-### 4. Configurar Arquivo config.php
+### 4. Configurar Arquivo config.php:
+
 Copie o modelo padrão:
 ```bash
 copy config-dist.php config.php
 ```
 *Edite o arquivo com as credenciais do seu banco local.*
 
-### 5. Criar Diretório de Dados
+### 5. Criar Diretório de Dados:
+
 ```bash
 mkdir C:\moodledata
 ```
 *Certifique-se de que o Apache tem permissão de escrita nesta pasta.*
 
-### 6. Instalar Dependências
+### 6. Instalar Dependências:
+
 ```bash
 composer install
 npm install
 ```
 
-### 7. Configurar Redirecionamento
+### 7. Configurar Redirecionamento:
+
 Garanta que o `index.php` na raiz redireciona para `public/`:
 ```php
 header('Location: public/', true, 301);
 ```
 
-### 8. Testar Conexão
+### 8. Testar Conexão:
+
 ```bash
 php admin/cli/check_database.php (Exemplo)
 ```
 
-### 9. Acessar o Instalador Web
+### 9. Acessar o Instalador Web:
+
 Abra [http://localhost/moodleExt/](http://localhost/moodleExt/) e siga o assistente do Moodle.
 
 </details>
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto:
 
 Abaixo, a organização simplificada dos diretórios:
 
