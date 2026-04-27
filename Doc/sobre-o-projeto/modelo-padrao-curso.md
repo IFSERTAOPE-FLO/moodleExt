@@ -13,7 +13,7 @@ Este documento serve como guia para a criação de novos cursos na plataforma.
 
 ## 2. Objetivo do Curso:
 
-O projeto consiste em um curso MOOC (Massive Open Online Course) sem tutoria, com o objetivo de disponibilizar cursos de qualidade para o público em geral. Além disso, o projeto visa desenvolver competências e habilidades relacionadas ao tema do curso. Por isso, os cursos são estruturados de forma que o aluno possa aprender no seu próprio ritmo, com liberdade para pausar, retomar e revisar o conteúdo quando desejar. Os cursos são divididos em módulos, cada um com seus próprios objetivos e atividades.
+[Descrever o que o aluno será capaz de fazer ao final do curso.]
 
 ## 3. Público-Alvo:
 
