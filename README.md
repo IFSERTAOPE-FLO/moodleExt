@@ -12,6 +12,9 @@
   <img src="https://img.shields.io/badge/Apache-2.4+-red?style=for-the-badge&logo=apache">
   <img src="https://img.shields.io/badge/Composer-2.x-black?style=for-the-badge&logo=composer">
   <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge">
+  <a href="https://github.com/IFSERTAOPE-FLO/moodleExt" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github">
+  </a>
 </p>
 
 <h1 align="center">🎓 MoodleExt - Sertão Conecta</h1>
@@ -258,5 +261,7 @@ Este projeto está sob a licença **GNU General Public License v3.0 (GPLv3)**. C
 
 <p align="center">
   🚀 <b>Time de Desenvolvimento:</b><br>
-  Victor Kauê &nbsp;•&nbsp; Giselle Souza
+  <a href="https://github.com/Victorkaue333" target="_blank">
+    <img src="https://img.shields.io/badge/Victor%20Kauê-181717?style=flat-square&logo=github&logoColor=white">
+  </a>
 </p>
