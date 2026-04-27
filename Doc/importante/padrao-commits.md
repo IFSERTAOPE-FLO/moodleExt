@@ -1,4 +1,4 @@
-### Padrão de Commits
+## Padrão de Commits:
 
 Será usado o padrão conventional de commits:
 
