@@ -21,6 +21,7 @@ Diferentes tipos de atividades interativas são incorporadas:
 5.**Preenchimento de Lacunas**: Reforça a prática e aplicação ativa do conhecimento.
 
 ## Integração e Experiência:
+
 A lógica de gamificação transforma a estrutura do curso:
 
 - **Atividades** em **Missões**
