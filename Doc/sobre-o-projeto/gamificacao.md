@@ -2,7 +2,8 @@
 
 A gamificação do projeto foi estruturada para transformar o processo de ensino-aprendizagem em uma experiência interativa, motivadora e centrada no usuário, utilizando o ambiente Moodle.
 
-## Ferramentas e Plugins
+## Ferramentas e Plugins:
+
 O sistema é sustentado por plugins que implementam mecânicas fundamentais:
 
 - **Level Up! XP**: Responsável pela atribuição de pontos (XP), definição de níveis, barra de progresso e rankings. Promove competição saudável e senso de evolução.
