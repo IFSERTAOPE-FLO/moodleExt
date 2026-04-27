@@ -354,14 +354,7 @@ moodleExt/
 │
 ├──  server/                    # Configurações de servidor
 │   └──  mysql/                 # Scripts MySQL (opcional)
-│
-├──  Doc/                       # Documentação do projeto
-│   ├── INSTALL.txt            # Instruções de instalação
-│   ├── UPGRADING.md           # Guia de atualização
-│   ├── TRADEMARK.txt          # Marcas registradas
-│   └── configuracao/          # Documentação de configuração
-│
-└── .github/                   # Configurações GitHub
+
     ├──  workflows/             # GitHub Actions CI/CD
     └──  ...                    # Outros arquivos Git
 ```
