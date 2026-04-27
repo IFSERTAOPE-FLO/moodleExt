@@ -52,4 +52,5 @@ O MoodleExt mantém o core do Moodle o mais limpo possível, preferindo extensõ
 * **Blocks (`blocks/`):** Para widgets de interface (ex: painel de gamificação).
 
 ---
+
 *Última atualização: Abril de 2026*
