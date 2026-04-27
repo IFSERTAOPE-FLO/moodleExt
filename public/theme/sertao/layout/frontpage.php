@@ -38,5 +38,5 @@ $templatecontext = [
 
 echo $OUTPUT->render_from_template('theme_sertao/frontpage', $templatecontext);
 
-// To satisfy the Moodle layout validator, we must have the following line:
-echo $OUTPUT->main_content();
+// To satisfy the Moodle layout validator, we must have the following line, but we don't echo it here to prevent token replacement issues.
+// $OUTPUT->main_content();
