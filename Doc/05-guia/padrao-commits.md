@@ -1,6 +1,6 @@
 ## Padrão de Commits:
 
-Será usado o padrão conventional de commits:
+Para manter um histórico de commits claro e organizado, siga o seguinte padrão de mensagens:
 
 - `feat:` Nova funcionalidade
 - `fix:` Correção de bug
