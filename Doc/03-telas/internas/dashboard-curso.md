@@ -1,4 +1,4 @@
-# Dashboard do Curso (Ambiente Interno)
+# Dashboard do Curso (Ambiente Interno):
 
 Este é o ambiente onde o aprendizado acontece, focado na jornada do aluno e nas mecânicas de gamificação.
 
