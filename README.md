@@ -56,6 +56,8 @@ O **MoodleExt** é uma adaptação estratégica do Moodle 5.1.3+, desenvolvida c
 
 ## 🚀 Recursos Principais:
 
+No que se diz respeito às funcionalidades, o MoodleExt se destaca por oferecer uma série de recursos avançados e personalizados para atender às necessidades do IFSERTÃO-PE:
+
 | Recurso | Descrição |
 | :--- | :--- |
 | **🎮 Gamificação** | Sistema de XP, níveis e medalhas para engajamento dos alunos. |
