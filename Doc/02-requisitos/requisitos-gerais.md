@@ -13,6 +13,7 @@ Este documento descreve os requisitos de alto nível para o funcionamento da pla
     - **Aluno**: Acesso a cursos, participação em atividades e visualização de progresso/insígnias.
 
 ### 1.2 Gestão Acadêmica:
+
 - **Catálogo de Cursos**: Exibição organizada dos cursos disponíveis por categorias.
 - **Sistema de Inscrição**: Permitir que alunos se inscrevam em cursos (auto-inscrição ou manual).
 - **Emissão de Certificados**: Geração automática de certificados em PDF após a conclusão dos requisitos do curso.
