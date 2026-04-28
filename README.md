@@ -29,6 +29,8 @@
 
 ## 📖 Sumário:
 
+A seguir, um guia rápido para navegar pela documentação e recursos do projeto:
+
 - [📌 Sobre o Projeto](#-sobre-o-projeto)
 - [🚀 Recursos Principais](#-recursos-principais)
 - [🛠️ Tecnologias](#️-tecnologias)
