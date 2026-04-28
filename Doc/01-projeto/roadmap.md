@@ -4,17 +4,17 @@ Este documento esboça os marcos (milestones) passados, presentes e futuros do p
 
 ## ✅ Fase 1: Fundação e Setup (Concluído)
 
-*   [x] Instalação base do Moodle 5.1.
-*   [x] Configuração da infraestrutura de segurança (Raiz pública segregada).
-*   [x] Implementação do pipeline de build (Grunt + Node.js).
-*   [x] Definição da identidade visual inicial (Cores e Logos).
+* [x] Instalação base do Moodle 5.1.
+* [x] Configuração da infraestrutura de segurança (Raiz pública segregada).
+* [x] Implementação do pipeline de build (Grunt + Node.js).
+* [x] Definição da identidade visual inicial (Cores e Logos).
 
 ## 🔨 Fase 2: Identidade e Interface (Em Andamento)
 
-*   [ ] Customização completa da Landing Page.
-*   [ ] Refatoração das telas de Login e Cadastro.
-*   [ ] Integração dos componentes da `componentlibrary` no tema principal.
-*   [ ] Configuração inicial dos módulos de Gamificação.
+* [ ] Customização completa da Landing Page.
+* [ ] Refatoração das telas de Login e Cadastro.
+* [ ] Integração dos componentes da `componentlibrary` no tema principal.
+* [ ] Configuração inicial dos módulos de Gamificação.
 
 ## 🚀 Fase 3: Funcionalidades Avançadas (Planejado)
 

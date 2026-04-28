@@ -1,8 +1,8 @@
-# 📖 Glossário de Termos — MoodleExt
+# 📖 Glossário de Termos — MoodleExt:
 
 Este documento define os termos técnicos e educacionais utilizados no contexto do projeto MoodleExt para garantir uma linguagem comum entre todos os colaboradores.
 
-## 🎓 Termos do Moodle (Core)
+## 🎓 Termos do Moodle (Core):
 
 | Termo | Descrição |
 | :--- | :--- |
@@ -16,7 +16,7 @@ Este documento define os termos técnicos e educacionais utilizados no contexto 
 
 ---
 
-## 🚀 Termos Específicos do MoodleExt
+## 🚀 Termos Específicos do MoodleExt:
 
 | Termo | Descrição |
 | :--- | :--- |
@@ -27,7 +27,7 @@ Este documento define os termos técnicos e educacionais utilizados no contexto 
 
 ---
 
-## 🏗️ Termos Técnicos (Desenvolvimento)
+## 🏗️ Termos Técnicos (Desenvolvimento):
 
 | Termo | Descrição |
 | :--- | :--- |
