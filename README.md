@@ -22,7 +22,7 @@
 <p align="center"><strong>Ambiente Virtual de Aprendizagem Customizado — IFSERTÃO-PE Campus Floresta</strong></p>
 
 <p align="center">
-  O MoodleExt é uma plataforma educacional baseada no Moodle, adaptada para centralizar a gestão acadêmica e modernizar a experiência de ensino-aprendizagem no IFSERTÃO-PE.
+  O MoodleExt é uma plataforma educacional baseada no Moodle, adaptada para centralizar a gestão acadêmica e modernizar a experiência de ensino-aprendizagem no IFSERTÃO-PE. Além disso, coinsiste em um projeto de extensão universitária, promovendo a inclusão digital e a inovação pedagógica na comunidade acadêmica. O projeto é desenvolvido por alunos do curso de Gestão da TI, com o objetivo de criar um ambiente digital que atenda às necessidades específicas dos estudantes, professores e servidores do campus, contribuindo para a melhoria da qualidade do ensino e da gestão acadêmica.
 </p>
 
 ---
