@@ -3,7 +3,7 @@
     <img src="https://raw.githubusercontent.com/moodle/moodle/main/.github/moodlelogo.svg" alt="Moodle Logo" width="200">
   </a>
   <br>
-  <img src=".¹assets/logo-sertaoconecta-semfundo.png" alt="Sertão Conecta Logo" width="400">
+  <img src="./assets/logo-sertaoconecta-semfundo.png" alt="Sertão Conecta Logo" width="400">
 </p>
 
 <p align="center">
