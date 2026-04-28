@@ -230,7 +230,7 @@ Para tarefas de manutenção, utilize os scripts em `admin/cli/`:
 
 ---
 
-## 📚 Documentação Completa
+## 📚 Documentação Completa:
 
 A documentação detalhada foi organizada em módulos para facilitar a consulta:
 
