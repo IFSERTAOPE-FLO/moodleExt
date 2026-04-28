@@ -31,7 +31,7 @@ Cada curso deve incluir:
 - Uso de **jogos educacionais** (quando aplicável).
 - Atividades de **preenchimento de lacunas**.
 
-## Requisitos de Estrutura
+## Requisitos de Estrutura:
 
 Padrão visual e funcional consistente por módulo:
 1.Introdução
@@ -50,7 +50,7 @@ O sistema deve permitir:
 - Registro de desempenho (notas e XP).
 - Visualização de conquistas (badges).
 
-## Requisitos Técnicos
+## Requisitos Técnicos:
 
 - Compatibilidade com dispositivos móveis e desktop.
 - Interface simples e intuitiva.
