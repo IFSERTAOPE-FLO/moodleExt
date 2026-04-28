@@ -3,7 +3,6 @@
     <img src="https://raw.githubusercontent.com/moodle/moodle/main/.github/moodlelogo.svg" alt="Moodle Logo" width="200">
   </a>
   <br>
-  <img src="./assets/logo-sertaoconecta-semfundo.png" alt="Sertão Conecta Logo" width="400">
 </p>
 
 <p align="center">
@@ -17,7 +16,11 @@
   </a>
 </p>
 
-<h1 align="center">🎓 MoodleExt - Sertão Conecta</h1>
+<h1 align="center">🎓 MoodleExt -  Sertão Conecta:</h1>
+
+<p align="center">
+ <img src="https://raw.githubusercontent.com/IFSERTAOPE-FLO/moodleExt/main/assets/logo-sertaoconecta-semfundo.png" width="200">
+ </p>
 
 <p align="center"><strong>Ambiente Virtual de Aprendizagem Customizado — IFSERTÃO-PE Campus Floresta</strong></p>
 
