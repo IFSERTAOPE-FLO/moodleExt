@@ -15,19 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Setup file migration helper.
+ * Strings for theme_sertao.
  *
- * @package    core
- * @copyright  2024 Andrew Lyons <andrew@nicols.co.uk>
+ * @package    theme_sertao
+ * @copyright  2026 Victor Kauê / Sertão Conecta
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-if (property_exists($CFG, 'dirroot') && !str_ends_with($CFG->dirroot, '/public')) {
-    if (!property_exists($CFG, 'libdir')) {
-        $CFG->libdir = $CFG->dirroot . '/lib';
-    } else {
-        $CFG->libdir = $CFG->libdir . '/lib';
-    }
-}
+defined('MOODLE_INTERNAL') || die();
 
-require_once(dirname(__DIR__) . '/public/lib/setup.php');
+$string['pluginname'] = 'Sertão Conecta Theme';
+$string['choosereadme'] = 'Theme Sertão Conecta - A premium theme for MoodleExt.';
+$string['configtitle'] = 'Sertão Conecta Settings';
+$string['region-side-pre'] = 'Right';

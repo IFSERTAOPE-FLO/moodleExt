@@ -15,19 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Setup file migration helper.
+ * Theme version info.
  *
- * @package    core
- * @copyright  2024 Andrew Lyons <andrew@nicols.co.uk>
+ * @package    theme_sertao
+ * @copyright  2026 Victor Kauê / Sertão Conecta
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-if (property_exists($CFG, 'dirroot') && !str_ends_with($CFG->dirroot, '/public')) {
-    if (!property_exists($CFG, 'libdir')) {
-        $CFG->libdir = $CFG->dirroot . '/lib';
-    } else {
-        $CFG->libdir = $CFG->libdir . '/lib';
-    }
-}
+defined('MOODLE_INTERNAL') || die();
 
-require_once(dirname(__DIR__) . '/public/lib/setup.php');
+$plugin->version   = 2026042700;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->requires  = 2024100100;        // Requires this Moodle version (Moodle 5.1+).
+$plugin->component = 'theme_sertao';    // Full name of the plugin (used for diagnostics).
+$plugin->dependencies = [
+    'theme_boost' => 2024100100,        // Dependent on Boost theme.
+];

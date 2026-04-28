@@ -15,19 +15,23 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Setup file migration helper.
+ * Renderers to allow theme_sertao to use Boost renderers.
  *
- * @package    core
- * @copyright  2024 Andrew Lyons <andrew@nicols.co.uk>
+ * @package    theme_sertao
+ * @copyright  2026 Victor Kauê / Sertão Conecta
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-if (property_exists($CFG, 'dirroot') && !str_ends_with($CFG->dirroot, '/public')) {
-    if (!property_exists($CFG, 'libdir')) {
-        $CFG->libdir = $CFG->dirroot . '/lib';
-    } else {
-        $CFG->libdir = $CFG->libdir . '/lib';
-    }
-}
+namespace theme_sertao\output;
 
-require_once(dirname(__DIR__) . '/public/lib/setup.php');
+defined('MOODLE_INTERNAL') || die;
+
+/**
+ * The core renderer for the Sertão theme.
+ *
+ * @package    theme_sertao
+ * @copyright  2026 Victor Kauê / Sertão Conecta
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class core_renderer extends \theme_boost\output\core_renderer {
+}

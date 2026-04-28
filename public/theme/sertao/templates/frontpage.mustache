@@ -1,0 +1,472 @@
+{{!
+    Landing Page template for Sertão Conecta.
+}}
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper" class="d-print-block">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <!-- Estilos da Landing Page -->
+    <style>
+        :root {
+            --sertao-dark-green: #0B5B33;
+            --sertao-light-green: #69a531;
+            --sertao-yellow: #F2A900;
+            --sertao-sand: #C29B6E;
+            --sertao-darker-green: #074223;
+        }
+        
+        .landing-navbar {
+            background-color: var(--sertao-dark-green) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            padding: 10px 0;
+        }
+        .landing-navbar .navbar-brand {
+            color: #fff !important;
+            font-size: 1.4rem;
+        }
+        .landing-navbar .nav-link {
+            color: rgba(255,255,255,0.9) !important;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+        .landing-navbar .nav-link:hover {
+            color: var(--sertao-yellow) !important;
+        }
+        .landing-navbar .btn-primary {
+            background-color: var(--sertao-yellow);
+            border-color: var(--sertao-yellow);
+            color: var(--sertao-dark-green);
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 8px 20px;
+        }
+        .landing-navbar .btn-primary:hover {
+            background-color: #e09d00;
+            border-color: #e09d00;
+            color: var(--sertao-darker-green);
+        }
+        .landing-navbar .btn-outline-light {
+            border-radius: 20px;
+            padding: 8px 20px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--sertao-dark-green) 0%, var(--sertao-darker-green) 100%);
+            padding-top: 140px !important;
+            padding-bottom: 80px;
+            color: #fff;
+            position: relative;
+        }
+        .hero-section h1 b {
+            color: var(--sertao-yellow);
+        }
+        .hero-section .btn-accent {
+            background-color: var(--sertao-yellow);
+            color: var(--sertao-dark-green);
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .hero-section .btn-accent:hover {
+            background-color: #e09d00;
+        }
+        .hero-section .btn-outline-light {
+            border-radius: 25px;
+        }
+        .hero-section .bg-white-10 {
+            background-color: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 15px !important;
+        }
+        .hero-section .placeholder-img {
+            background-color: rgba(255,255,255,0.15) !important;
+            border-radius: 10px !important;
+        }
+        
+        .section-title {
+            color: var(--sertao-dark-green);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--sertao-yellow);
+            border-radius: 2px;
+        }
+        
+        .course-card {
+            border-radius: 15px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05) !important;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        .course-card .card-title {
+            color: var(--sertao-dark-green);
+        }
+        .course-card .btn-primary {
+            background-color: var(--sertao-light-green);
+            border-color: var(--sertao-light-green);
+            border-radius: 15px;
+        }
+        .course-card .btn-primary:hover {
+            background-color: #558726;
+            border-color: #558726;
+        }
+        
+        .differentials-section .bg-light {
+            border-radius: 15px !important;
+            border-bottom: 5px solid var(--sertao-sand);
+            transition: transform 0.3s ease;
+            background-color: #f8f9fa !important;
+        }
+        .differentials-section .bg-light:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--sertao-light-green);
+        }
+        
+        .gamification-section .bg-success {
+            background-color: var(--sertao-light-green) !important;
+        }
+        .gamification-section .bg-info {
+            background-color: var(--sertao-yellow) !important;
+        }
+        .gamification-section .fa-trophy {
+            color: var(--sertao-yellow) !important;
+            font-size: 1.5rem;
+        }
+        
+        .cta-section {
+            background-color: var(--sertao-yellow) !important;
+            color: var(--sertao-dark-green) !important;
+        }
+        .cta-section .btn-dark {
+            background-color: var(--sertao-dark-green);
+            border-color: var(--sertao-dark-green);
+            border-radius: 25px;
+            color: #fff;
+        }
+        .cta-section .btn-dark:hover {
+            background-color: var(--sertao-darker-green);
+        }
+        
+        .sertao-footer {
+            background-color: var(--sertao-darker-green) !important;
+            color: #fff !important;
+        }
+        .sertao-footer .text-muted {
+            color: rgba(255,255,255,0.7) !important;
+        }
+        .sertao-footer a {
+            color: #fff !important;
+            opacity: 0.8;
+            text-decoration: none;
+        }
+        .sertao-footer a:hover {
+            color: var(--sertao-yellow) !important;
+            opacity: 1;
+        }
+    </style>
+
+    <!-- Navbar - barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top landing-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="{{{ logo_url }}}" alt="Logo Sertão Conecta" height="45">
+                <span class="ms-2 fw-bold">SERTÃO CONECTA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trilhas">Trilhas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="{{{ login_url }}}" class="btn btn-outline-light me-3">Login</a>
+                    <a href="#cursos" class="btn btn-primary">Começar Agora</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Seção inicial -->
+    <section id="inicio" class="hero-section d-flex align-items-center">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-white">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Transforme seu <br><b>Futuro</b> com Educação!
+                    </h1>
+                    <p class="lead mb-5">
+                        A melhor plataforma de ensino no Sertão. Desenvolvida pelo <br>
+                        <b>IFSERTÃO-PE Campus Floresta</b>.
+                    </p>
+                    <div class="hero-btns mb-5">
+                        <a href="#cursos" class="btn btn-lg btn-accent px-5 me-3">Começar Agora</a>
+                        <a href="#sobre" class="btn btn-lg btn-outline-light px-5">Saiba Mais</a>
+                    </div>
+                </div>
+                
+                
+                <!-- Aqui vai ficar as imagens institucional -->
+                <div class="col-lg-5">
+                    <div class="hero-image-container p-4 bg-white-10 rounded text-center">
+                        <div class="placeholder-img rounded mb-4 d-flex align-items-center justify-content-center" style="height: 250px;">
+                            <span class="text-white fw-bold">IMAGEM INSTITUCIONAL</span>
+                        </div>
+                        <div class="row text-white">
+                            <div class="col-4">
+                                <h4 class="fw-bold mb-0">5.000+</h4>
+                                <small>Alunos</small>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="fw-bold mb-0">150+</h4>
+                                <small>Cursos</small>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="fw-bold mb-0">1000+</h4>
+                                <small>Certificados</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Seção de Sobre -->
+    <section id="sobre" class="about-section py-5 bg-white">
+        <div class="container mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+                    <h2 class="fw-bold section-title mb-4">Sobre o Projeto</h2>
+                    <br>
+                    <p class="lead text-muted mb-4 mt-3">Nossa Missão e Impacto no Sertão.</p>
+                    <div class="about-text-placeholder text-start">
+                        <div class="bg-light rounded mb-2" style="height: 15px; width: 100%;"></div>
+                        <div class="bg-light rounded mb-2" style="height: 15px; width: 90%;"></div>
+                        <div class="bg-light rounded mb-2" style="height: 15px; width: 95%;"></div>
+                        <div class="bg-light rounded mb-2" style="height: 15px; width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="institutional-placeholder bg-light rounded d-flex align-items-center justify-content-center shadow-sm" style="height: 300px; border: 2px dashed #ccc;">
+                        <h4 class="text-muted fw-bold">Aqui é onde vai ficar um vídeo ou algo do tipo</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses  - Seção de Cursos em Destaque -->
+    <section id="cursos" class="courses-section py-5" style="background-color: #f4f9f5;">
+        <div class="container text-center">
+            <h2 class="fw-bold section-title mb-5">Aqui estão os cursos em Destaque</h2>
+            <br>
+            <div class="row mt-4 text-start">
+                {{#courses}}
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 course-card shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">{{title}}</h5>
+                            <p class="card-text text-muted small flex-grow-1">Descrição breve do curso.</p>
+                            <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+                {{/courses}}
+                {{^courses}}
+                <!-- Placeholders -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 course-card shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Gestão Rural</h5>
+                            <p class="card-text text-muted small flex-grow-1">Aprenda técnicas de administração para propriedades rurais.</p>
+                            <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 course-card shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Inclusão Digital</h5>
+                            <p class="card-text text-muted small flex-grow-1">Conceitos básicos de informática e internet para iniciantes.</p>
+                            <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 course-card shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Agroecologia</h5>
+                            <p class="card-text text-muted small flex-grow-1">Práticas sustentáveis para o cultivo no semiárido.</p>
+                            <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 course-card shadow-sm border-0">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Empreendedorismo</h5>
+                            <p class="card-text text-muted small flex-grow-1">Como criar e gerir o seu próprio negócio no Sertão.</p>
+                            <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                        </div>
+                    </div>
+                </div>
+                {{/courses}}
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials - Seção de Diferenciais -->
+    <section class="differentials-section py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="fw-bold section-title mb-5">Diferenciais dessa Plataforma</h2>
+            <br>
+            <div class="row mt-4">
+                <div class="col-md-3 mb-3">
+                    <div class="p-4 bg-light text-center h-100 d-flex flex-column align-items-center justify-content-center shadow-sm">
+                        <span class="fw-bold text-dark" style="font-size: 1.1rem;">Aprendizado Flexível</span>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-4 bg-light text-center h-100 d-flex flex-column align-items-center justify-content-center shadow-sm">
+                        <span class="fw-bold text-dark" style="font-size: 1.1rem;">Plataforma Interativa</span>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-4 bg-light text-center h-100 d-flex flex-column align-items-center justify-content-center shadow-sm">
+                        <span class="fw-bold text-dark" style="font-size: 1.1rem;">Inclusão Digital</span>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-4 bg-light text-center h-100 d-flex flex-column align-items-center justify-content-center shadow-sm">
+                        <span class="fw-bold text-dark" style="font-size: 1.1rem;">Elementos Gamificados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamification - Seção de Gamificação -->
+    <section class="gamification-section py-5" style="background-color: #f4f9f5;">
+        <div class="container text-center">
+            <h2 class="fw-bold section-title mb-5">Introdução à Gamificação</h2>
+            <br>
+            <div class="row mt-4 text-start">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100 border-0">
+                        <p class="fw-bold mb-3 text-dark">Progresso Geral</p>
+                        <div class="progress rounded-pill" style="height: 12px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100 border-0">
+                        <p class="fw-bold mb-3 text-dark">Últimas Conquistas</p>
+                        <div class="d-flex justify-content-center">
+                            <span style="font-size: 1.8rem; margin: 0 8px;">🏆</span>
+                            <span style="font-size: 1.8rem; margin: 0 8px;">🎖️</span>
+                            <span style="font-size: 1.8rem; margin: 0 8px;">⭐</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 text-start">
+                    <div class="p-4 bg-white rounded shadow-sm h-100 border-0">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <p class="fw-bold mb-0 text-dark">Nível Atual</p>
+                            <span class="badge" style="background-color: var(--sertao-yellow); color: #000;">Nível 3</span>
+                        </div>
+                        <div class="progress rounded-pill bg-light" style="height: 12px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row text-center mt-5 pt-4 border-top">
+                <div class="col-md-4 mb-3">
+                    <h2 class="fw-bold" style="color: var(--sertao-dark-green);">8.000+</h2>
+                    <p class="fw-bold text-muted text-uppercase" style="letter-spacing: 1px; font-size: 0.85rem;">Alunos Ativos</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h2 class="fw-bold" style="color: var(--sertao-light-green);">200+</h2>
+                    <p class="fw-bold text-muted text-uppercase" style="letter-spacing: 1px; font-size: 0.85rem;">Cursos Disponíveis</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h2 class="fw-bold" style="color: var(--sertao-yellow);">5.000+</h2>
+                    <p class="fw-bold text-muted text-uppercase" style="letter-spacing: 1px; font-size: 0.85rem;">Certificados Emitidos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - Seção de Chamada para Ação -->
+    <section class="cta-section py-5">
+        <div class="container text-center py-4">
+            <h2 class="fw-bold mb-4">Pronto para Começar sua Jornada de Sucesso?</h2>
+            <p class="mb-4">Junte-se aos estudantes e mude o seu futuro hoje mesmo.</p>
+            <a href="#cursos" class="btn btn-dark btn-lg px-5 py-3 fw-bold shadow-sm">COMEÇAR AGORA</a>
+        </div>
+    </section>
+
+    <!-- Footer - Seção de Rodapé -->
+    <footer class="sertao-footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4 pe-lg-5">
+                    <h5 class="fw-bold mb-4" style="color: var(--sertao-yellow);">Sertão Conecta</h5>
+                    <p class="text-muted mb-4">
+                        Transformando a realidade do Sertão através da educação digital, inovação tecnológica e inclusão social por meio da tecnologia.
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold mb-4" style="color: var(--sertao-yellow);">Acesso Rápido</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#inicio">Início</a></li>
+                        <li class="mb-2"><a href="#cursos">Cursos</a></li>
+                        <li class="mb-2"><a href="#sobre">Sobre o Projeto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold mb-4" style="color: var(--sertao-yellow);">Contato</h6>
+                    <ul class="list-unstyled mb-0 text-muted">
+                        <li class="mb-2">📧 floresta@ifsertao-pe.edu.br</li>
+                        <li class="mb-2">📍 IFSERTÃO-PE Campus Floresta</li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 30px 0;">
+            <div class="text-center text-muted small">
+                © 2026 MoodleExt — Desenvolvido por alunos do IFSERTÃO-PE Campus Floresta
+            </div>
+        </div>
+    </footer>
+
+    {{{ output.main_content }}}
+    {{{ output.standard_after_main_region_html }}}
+
+</div>
+
+</body>
+</html>

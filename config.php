@@ -4,6 +4,11 @@ global $CFG;
 $CFG = new stdClass();
 
 //=========================================================================
+// 0. DIRECTORY ROOT
+//=========================================================================
+$CFG->dirroot   = __DIR__;
+
+//=========================================================================
 // 1. DATABASE SETUP
 //=========================================================================
 $CFG->dbtype    = 'mariadb';                // XAMPP usa MariaDB
@@ -41,5 +46,12 @@ $CFG->routerconfigured = false;
 $CFG->directorypermissions = 02777;
 
 $CFG->admin = 'admin';
+
+//=========================================================================
+// 7. DEBUGGING (ENABLE FOR THEME DEVELOPMENT)
+//=========================================================================
+$CFG->debug = (E_ALL | E_STRICT);
+$CFG->debugdisplay = 1;
+$CFG->themedesignermode = 1;
 
 require_once(__DIR__ . '/lib/setup.php');

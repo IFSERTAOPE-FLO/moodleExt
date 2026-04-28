@@ -15,19 +15,35 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Setup file migration helper.
+ * Theme library functions.
  *
- * @package    core
- * @copyright  2024 Andrew Lyons <andrew@nicols.co.uk>
+ * @package    theme_sertao
+ * @copyright  2026 Victor Kauê / Sertão Conecta
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-if (property_exists($CFG, 'dirroot') && !str_ends_with($CFG->dirroot, '/public')) {
-    if (!property_exists($CFG, 'libdir')) {
-        $CFG->libdir = $CFG->dirroot . '/lib';
-    } else {
-        $CFG->libdir = $CFG->libdir . '/lib';
-    }
-}
+defined('MOODLE_INTERNAL') || die();
 
-require_once(dirname(__DIR__) . '/public/lib/setup.php');
+/**
+ * Get the SCSS content for the theme.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string The SCSS content.
+ */
+function theme_sertao_get_main_scss_content($theme) {
+    global $CFG;
+
+    $scss = '';
+    
+    // Get the parent theme (boost) SCSS content.
+    if (function_exists('theme_boost_get_main_scss_content')) {
+        $scss .= theme_boost_get_main_scss_content($theme);
+    }
+
+    $filename = $CFG->dirroot . '/theme/sertao/scss/post.scss';
+    if (file_exists($filename)) {
+        $scss .= file_get_contents($filename);
+    }
+
+    return $scss;
+}
