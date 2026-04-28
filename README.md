@@ -93,7 +93,7 @@ Para rodar o projeto localmente, você precisará de:
 - ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) **Node.js** (Para compilação de assets)
 
 <details>
-<summary><b>🔍 Ver Extensões PHP obrigatórias</b></summary>
+<summary><b>🔍 Ver Extensões PHP obrigatórias para o MoodleExt</b></summary>
 
 `gd`, `intl`, `sodium`, `zip`, `soap`, `mbstring`, `curl`, `openssl`, `xmlreader`, `xml`, `json`, `fileinfo`, `ctype`, `dom`, `simplexml`, `pcre`, `spl`, `filter`, `hash`, `iconv`, `zlib`
 </details>
