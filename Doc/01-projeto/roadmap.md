@@ -18,16 +18,16 @@ Este documento esboça os marcos (milestones) passados, presentes e futuros do p
 
 ## 🚀 Fase 3: Funcionalidades Avançadas (Planejado)
 
-*   [ ] Implementação do sistema de XP e Níveis (Sertão Conecta).
-*   [ ] Integração com modelos de Machine Learning (Analytics) para predição de evasão.
-*   [ ] Auditoria completa de Acessibilidade (Brickfield) em todos os cursos padrão.
-*   [ ] Criação de templates de curso "Mestre" para novos professores.
+* [ ] Implementação do sistema de XP e Níveis (Sertão Conecta).
+* [ ] Integração com modelos de Machine Learning (Analytics) para predição de evasão.
+* [ ] Auditoria completa de Acessibilidade (Brickfield) em todos os cursos padrão.
+* [ ] Criação de templates de curso "Mestre" para novos professores.
 
 ## 📱 Fase 4: Expansão e Mobile (Futuro)
 
-*   [ ] Lançamento do App Mobile customizado.
-*   [ ] Suporte a recursos de Realidade Aumentada (AR) em disciplinas técnicas.
-*   [ ] Integração total com sistemas acadêmicos externos do IFSERTÃO-PE.
+* [ ] Lançamento do App Mobile customizado.
+* [ ] Suporte a recursos de Realidade Aumentada (AR) em disciplinas técnicas.
+* [ ] Integração total com sistemas acadêmicos externos do IFSERTÃO-PE.
 
 ---
 > **Nota:** Este roadmap é dinâmico e pode ser alterado conforme as necessidades da comunidade acadêmica e do IFSERTÃO-PE Campus Floresta.
