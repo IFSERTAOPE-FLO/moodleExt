@@ -1,8 +1,8 @@
-# 🏗️ Arquitetura Técnica — MoodleExt
+# 🏗️ Arquitetura Técnica — MoodleExt:
 
 Este documento descreve a infraestrutura técnica, o fluxo de dados e a organização do código do projeto MoodleExt.
 
-## 📡 Visão Geral da Stack
+## 📡 Visão Geral da Stack:
 
 O MoodleExt é construído sobre a arquitetura **LAMP/WAMP** (Linux/Windows, Apache, MySQL/MariaDB, PHP).
 
@@ -15,7 +15,7 @@ O MoodleExt é construído sobre a arquitetura **LAMP/WAMP** (Linux/Windows, Apa
 
 ---
 
-## 🛠️ Fluxo de Desenvolvimento de Assets
+## 🛠️ Fluxo de Desenvolvimento de Assets:
 
 O projeto utiliza o **Grunt** para processar arquivos de estilo e scripts modernos. O fluxo segue o padrão:
 
@@ -25,7 +25,7 @@ O projeto utiliza o **Grunt** para processar arquivos de estilo e scripts modern
 
 ---
 
-## 🔐 Segurança e Estrutura de Pastas
+## 🔐 Segurança e Estrutura de Pastas:
 
 Para aumentar a segurança, o projeto utiliza uma **raiz pública segregada**:
 
@@ -34,7 +34,7 @@ Para aumentar a segurança, o projeto utiliza uma **raiz pública segregada**:
 
 ---
 
-## 🔄 Fluxo de Dados (Requisição Típica)
+## 🔄 Fluxo de Dados (Requisição Típica):
 
 1. O usuário acessa `http://localhost/moodleExt/`.
 2. O `index.php` na raiz redireciona para `public/`.
@@ -43,7 +43,7 @@ Para aumentar a segurança, o projeto utiliza uma **raiz pública segregada**:
 
 ---
 
-## 🧩 Customizações e Plugins
+## 🧩 Customizações e Plugins:
 
 O MoodleExt mantém o core do Moodle o mais limpo possível, preferindo extensões via:
 
