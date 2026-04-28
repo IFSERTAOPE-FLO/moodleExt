@@ -83,7 +83,7 @@ O projeto utiliza uma stack robusta e atualizada para garantir performance e seg
 
 ---
 
-## ⚙️ Pré-requisitos
+## ⚙️ Pré-requisitos:
 
 Para rodar o projeto localmente, você precisará de:
 
