@@ -228,7 +228,6 @@ Para tarefas de manutenção, utilize os scripts em `admin/cli/`:
 | `php admin/cli/check_database_schema.php` | Verifica a integridade do esquema do banco. |
 | `php admin/cli/maintenance.php --enable` | Coloca o site em modo de manutenção. |
 
-
 ---
 
 ## 📚 Documentação Completa
