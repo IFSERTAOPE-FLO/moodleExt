@@ -9,25 +9,22 @@
 <div id="page-wrapper" class="d-print-block">
 
     {{{ output.standard_top_of_body_html }}}
-
-    <!-- Estilos da Landing Page -->
     <style>
         :root {
             --sertao-dark-green: #0B5B33;
             --sertao-light-green: #69a531;
             --sertao-yellow: #F2A900;
-            --sertao-sand: #C29B6E;
             --sertao-darker-green: #074223;
         }
-        
         .landing-navbar {
-            background-color: var(--sertao-dark-green) !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            background: var(--sertao-dark-green) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,.15);
             padding: 10px 0;
-            transition: all .35s ease;
+            transition: background .35s ease, box-shadow .35s ease, padding .35s ease;
+            z-index: 1050;
         }
         .landing-navbar .container {
-            transition: all .35s ease;
+            transition: background .35s ease, box-shadow .35s ease, border-radius .35s ease, padding .35s ease;
         }
         .landing-navbar.scrolled {
             background: transparent !important;
@@ -35,224 +32,91 @@
             padding: 14px 0;
         }
         .landing-navbar.scrolled .container {
-            background: rgba(7, 66, 35, 0.92);
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(7,66,35,.92);
+            border: 1px solid rgba(255,255,255,.2);
             border-radius: 999px;
             backdrop-filter: blur(8px);
             max-width: 1120px;
             padding: 10px 18px;
             box-shadow: 0 14px 34px rgba(0,0,0,.24);
         }
-        .landing-navbar .navbar-brand {
-            color: #fff !important;
-            font-size: 1.4rem;
-        }
         .landing-navbar .navbar-brand img {
             width: 44px;
             height: 44px;
             object-fit: contain;
         }
-        .landing-navbar .nav-link {
-            color: rgba(255,255,255,0.9) !important;
-            font-weight: 500;
-            margin: 0 10px;
-        }
-        .landing-navbar .nav-link:hover {
-            color: var(--sertao-yellow) !important;
-        }
-        .landing-navbar .btn-primary {
-            background-color: var(--sertao-yellow);
-            border-color: var(--sertao-yellow);
-            color: var(--sertao-dark-green);
-            font-weight: bold;
-            border-radius: 20px;
-            padding: 8px 20px;
-        }
-        .landing-navbar .btn-primary:hover {
-            background-color: #e09d00;
-            border-color: #e09d00;
-            color: var(--sertao-darker-green);
-        }
-        .landing-navbar .btn-outline-light {
-            border-radius: 20px;
-            padding: 8px 20px;
-        }
-        
         .hero-section {
             background: linear-gradient(135deg, var(--sertao-dark-green) 0%, var(--sertao-darker-green) 100%);
+            min-height: 92vh;
             padding-top: 140px !important;
             padding-bottom: 80px;
             color: #fff;
             position: relative;
+            overflow: hidden;
         }
-        .hero-section h1 b {
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255,255,255,.08), transparent 60%);
+            pointer-events: none;
+        }
+        .hero-section h1 span {
             color: var(--sertao-yellow);
-        }
-        .hero-section .btn-accent {
-            background-color: var(--sertao-yellow);
-            color: var(--sertao-dark-green);
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-        .hero-section .btn-accent:hover {
-            background-color: #e09d00;
-        }
-        .hero-section .btn-outline-light {
-            border-radius: 25px;
-        }
-        .hero-section .bg-white-10 {
-            background-color: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 15px !important;
-        }
-        .hero-section .placeholder-img {
-            background-color: rgba(255,255,255,0.15) !important;
-            border-radius: 10px !important;
         }
         .hero-institutional-img {
             width: 100%;
+            max-width: 100%;
             height: 250px;
             object-fit: cover;
             border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.25);
+            border: 1px solid rgba(255,255,255,.25);
             box-shadow: 0 10px 28px rgba(0,0,0,.2);
+            display: block;
         }
         .about-visual-card {
             background: linear-gradient(160deg, #ffffff 0%, #f1f8f3 100%);
             border: 1px solid rgba(11,91,51,.12);
             border-radius: 16px;
             padding: 1.2rem;
+            overflow: hidden;
         }
         .about-visual-card img {
             width: 100%;
+            max-width: 100%;
             max-height: 280px;
             object-fit: contain;
             border-radius: 12px;
-            background: #fff;
-            box-shadow: inset 0 0 0 1px rgba(11,91,51,.08);
+            display: block;
         }
-        .about-highlight {
-            border-left: 4px solid var(--sertao-yellow);
-            background: #f4f9f5;
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .course-meta .badge {
             border-radius: 10px;
-            padding: 14px 16px;
-            color: #2f3b33;
-            margin-bottom: 14px;
+            font-size: .7rem;
         }
-        .differentials-section .icon-dot {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(11,91,51,.12);
-            color: var(--sertao-dark-green);
-            font-weight: 700;
-            margin-bottom: 12px;
+        .progress-bar {
+            transition: width 1.2s ease-in-out;
         }
-        @media (max-width: 991px) {
+        @media (max-width: 768px) {
+            .hero-section {
+                padding-top: 120px !important;
+                text-align: center;
+            }
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            .hero-btns {
+                flex-direction: column;
+            }
+            .hero-btns a {
+                width: 100%;
+            }
             .landing-navbar.scrolled .container {
                 border-radius: 16px;
             }
-            .landing-navbar .navbar-brand img {
-                width: 38px;
-                height: 38px;
-            }
-        }
-        
-        .section-title {
-            color: var(--sertao-dark-green);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--sertao-yellow);
-            border-radius: 2px;
-        }
-        
-        .course-card {
-            border-radius: 15px !important;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05) !important;
-        }
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-        }
-        .course-card .card-title {
-            color: var(--sertao-dark-green);
-        }
-        .course-card .btn-primary {
-            background-color: var(--sertao-light-green);
-            border-color: var(--sertao-light-green);
-            border-radius: 15px;
-        }
-        .course-card .btn-primary:hover {
-            background-color: #558726;
-            border-color: #558726;
-        }
-        
-        .differentials-section .bg-light {
-            border-radius: 15px !important;
-            border-bottom: 5px solid var(--sertao-sand);
-            transition: transform 0.3s ease;
-            background-color: #f8f9fa !important;
-        }
-        .differentials-section .bg-light:hover {
-            transform: translateY(-5px);
-            border-bottom-color: var(--sertao-light-green);
-        }
-        
-        .gamification-section .bg-success {
-            background-color: var(--sertao-light-green) !important;
-        }
-        .gamification-section .bg-info {
-            background-color: var(--sertao-yellow) !important;
-        }
-        .gamification-section .fa-trophy {
-            color: var(--sertao-yellow) !important;
-            font-size: 1.5rem;
-        }
-        
-        .cta-section {
-            background-color: var(--sertao-yellow) !important;
-            color: var(--sertao-dark-green) !important;
-        }
-        .cta-section .btn-dark {
-            background-color: var(--sertao-dark-green);
-            border-color: var(--sertao-dark-green);
-            border-radius: 25px;
-            color: #fff;
-        }
-        .cta-section .btn-dark:hover {
-            background-color: var(--sertao-darker-green);
-        }
-        
-        .sertao-footer {
-            background-color: var(--sertao-darker-green) !important;
-            color: #fff !important;
-        }
-        .sertao-footer .text-muted {
-            color: rgba(255,255,255,0.7) !important;
-        }
-        .sertao-footer a {
-            color: #fff !important;
-            opacity: 0.8;
-            text-decoration: none;
-        }
-        .sertao-footer a:hover {
-            color: var(--sertao-yellow) !important;
-            opacity: 1;
         }
     </style>
 
@@ -288,10 +152,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-7 text-white">
                     <h1 class="display-4 fw-bold mb-4">
-                        Transforme seu <br><b>Futuro</b> com Educação!
+                        Transforme seu <span>Futuro</span> com Educação!
                     </h1>
                     <p class="lead mb-5">
-                        A melhor plataforma de ensino no Sertão. Desenvolvida pelo <br>
+                        A melhor plataforma de ensino no Sertão. Desenvolvida pelo
                         <b>IFSERTÃO-PE Campus Floresta</b>.
                     </p>
                     <div class="hero-btns mb-5">
@@ -304,7 +168,7 @@
                 <!-- Aqui vai ficar as imagens institucional -->
                 <div class="col-lg-5">
                     <div class="hero-image-container p-4 bg-white-10 rounded text-center">
-                        <img src="{{{ hero_image_url }}}" alt="Identidade Sertão Conecta" class="hero-institutional-img mb-4">
+                        <img src="{{{ hero_image_url }}}" alt="Imagem institucional do Sertão Conecta com identidade visual do projeto" class="hero-institutional-img mb-4" loading="lazy" decoding="async">
                         <div class="row text-white">
                             <div class="col-4">
                                 <h4 class="fw-bold mb-0">5.000+</h4>
@@ -331,7 +195,6 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
                     <h2 class="fw-bold section-title mb-4">Sobre o Projeto</h2>
-                    <br>
                     <p class="lead text-muted mb-4 mt-3">Nossa Missão e Impacto no Sertão.</p>
                     <div class="about-text-placeholder text-start">
                         <p class="about-highlight mb-3">
@@ -344,7 +207,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-visual-card shadow-sm">
-                        <img src="{{{ about_image_url }}}" alt="Marca Sertão Conecta">
+                        <img src="{{{ about_image_url }}}" alt="Marca oficial do Sertão Conecta" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -355,14 +218,17 @@
     <section id="cursos" class="courses-section py-5" style="background-color: #f4f9f5;">
         <div class="container text-center">
             <h2 class="fw-bold section-title mb-5">Aqui estão os cursos em Destaque</h2>
-            <br>
             <div class="row mt-4 text-start">
                 {{#courses}}
                 <div class="col-md-3 mb-4">
                     <div class="card h-100 course-card shadow-sm border-0">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">{{title}}</h5>
-                            <p class="card-text text-muted small flex-grow-1">Descrição breve do curso.</p>
+                            <div class="course-meta mb-2">
+                                <span class="badge bg-light text-dark">Iniciante</span>
+                                <span class="text-muted small ms-2">3h</span>
+                            </div>
+                            <p class="card-text text-muted small flex-grow-1">{{#summary}}{{summary}}{{/summary}}{{^summary}}Descrição breve do curso.{{/summary}}</p>
                             <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
                         </div>
                     </div>
@@ -415,7 +281,6 @@
     <section class="differentials-section py-5 bg-white">
         <div class="container text-center">
             <h2 class="fw-bold section-title mb-5">Diferenciais dessa Plataforma</h2>
-            <br>
             <div class="row mt-4">
                 <div class="col-md-3 mb-3">
                     <div class="p-4 bg-light text-center h-100 d-flex flex-column align-items-center justify-content-center shadow-sm">
@@ -449,7 +314,6 @@
     <section class="gamification-section py-5" style="background-color: #f4f9f5;">
         <div class="container text-center">
             <h2 class="fw-bold section-title mb-5">Introdução à Gamificação</h2>
-            <br>
             <div class="row mt-4 text-start">
                 <div class="col-md-4 mb-4">
                     <div class="p-4 bg-white rounded shadow-sm h-100 border-0">
@@ -562,7 +426,25 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     togglePill();
-    window.addEventListener('scroll', togglePill, { passive: true });
+
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                togglePill();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    document.querySelectorAll('.progress-bar').forEach(function(bar) {
+        var value = bar.getAttribute('aria-valuenow');
+        bar.style.width = '0%';
+        setTimeout(function() {
+            bar.style.width = value + '%';
+        }, 300);
+    });
 });
 </script>
 
