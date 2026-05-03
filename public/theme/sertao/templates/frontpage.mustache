@@ -19,9 +19,14 @@
         .landing-navbar {
             background: var(--sertao-dark-green) !important;
             box-shadow: 0 4px 15px rgba(0,0,0,.15);
-            padding: 10px 0;
+            padding: 14px 0;
             transition: background .35s ease, box-shadow .35s ease, padding .35s ease;
             z-index: 1050;
+        }
+        .landing-navbar .navbar-brand {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: .2px;
         }
         .landing-navbar .container {
             transition: background .35s ease, box-shadow .35s ease, border-radius .35s ease, padding .35s ease;
@@ -41,8 +46,8 @@
             box-shadow: 0 14px 34px rgba(0,0,0,.24);
         }
         .landing-navbar .navbar-brand img {
-            width: 44px;
-            height: 44px;
+            width: 72px;
+            height: 72px;
             object-fit: contain;
         }
         .hero-section {
@@ -116,6 +121,13 @@
             }
             .landing-navbar.scrolled .container {
                 border-radius: 16px;
+            }
+            .landing-navbar .navbar-brand {
+                font-size: 1.4rem;
+            }
+            .landing-navbar .navbar-brand img {
+                width: 52px;
+                height: 52px;
             }
         }
     </style>
