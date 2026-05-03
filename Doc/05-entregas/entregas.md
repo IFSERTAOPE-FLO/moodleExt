@@ -22,6 +22,7 @@ Status geral: `Em andamento`
 - [ ] Definir critérios de aceite por funcionalidade e por tela.
 
 Definição de pronto:
+
 - Escopo aprovado.
 - Checklist técnico preenchido.
 - Matriz de critérios de aceite criada.
@@ -34,6 +35,7 @@ Definição de pronto:
 - [ ] Testar responsividade em mobile e desktop.
 
 Definição de pronto:
+
 - Fluxo visitante > login/cadastro funcional.
 - Telas sem quebra visual nos principais breakpoints.
 
@@ -45,6 +47,7 @@ Definição de pronto:
 - [ ] Validar permissões por papel (admin, professor/criador, aluno).
 
 Definição de pronto:
+
 - Usuário consegue localizar curso, se inscrever e concluir fluxo de certificação.
 
 ## 14/05 a 17/05 — Gamificação v1
