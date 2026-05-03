@@ -13,14 +13,17 @@ define(['jquery'], function($) {
          * Initialise the theme frontpage effects.
          */
         init: function() {
-            // Navbar scroll effect
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 50) {
+            var updateNavbarState = function() {
+                if ($(window).scrollTop() > 28) {
                     $('.landing-navbar').addClass('scrolled');
                 } else {
                     $('.landing-navbar').removeClass('scrolled');
                 }
-            });
+            };
+
+            // Navbar scroll effect (pill on scroll).
+            $(window).on('scroll', updateNavbarState);
+            updateNavbarState();
 
             // Smooth scroll for anchor links
             $('a[href^="#"]').on('click', function(e) {

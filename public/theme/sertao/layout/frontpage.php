@@ -32,7 +32,9 @@ $templatecontext = [
     'output' => $OUTPUT,
     'bodyattributes' => $OUTPUT->body_attributes(),
     'sidepreblocks' => $OUTPUT->blocks('side-pre'),
-    'logo_url' => $OUTPUT->image_url('logo-sertao-conecta', 'theme_sertao'),
+    'logo_url' => (new moodle_url('/assets/logo-sertaoconecta-semfundo.png'))->out(false),
+    'hero_image_url' => (new moodle_url('/assets/logo-sertao-conecta.jpeg'))->out(false),
+    'about_image_url' => (new moodle_url('/assets/logo-sertaoconecta-semfundo.png'))->out(false),
     'login_url' => new moodle_url('/login/index.php'),
 ];
 
