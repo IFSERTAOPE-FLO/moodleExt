@@ -24,17 +24,14 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// Initialize theme JS.
-$PAGE->requires->js_call_amd('theme_sertao/init', 'init');
-
 $templatecontext = [
     'sitename' => format_string($SITE->fullname, true, ['context' => context_system::instance()]),
     'output' => $OUTPUT,
     'bodyattributes' => $OUTPUT->body_attributes(),
     'sidepreblocks' => $OUTPUT->blocks('side-pre'),
-    'logo_url' => (new moodle_url('/assets/logo-sertaoconecta-semfundo.png'))->out(false),
-    'hero_image_url' => (new moodle_url('/assets/logo-sertao-conecta.jpeg'))->out(false),
-    'about_image_url' => (new moodle_url('/assets/logo-sertaoconecta-semfundo.png'))->out(false),
+    'logo_url' => $OUTPUT->image_url('logo-sertaoconecta-semfundo', 'theme_sertao')->out(false),
+    'hero_image_url' => $OUTPUT->image_url('logo-sertao-conecta', 'theme_sertao')->out(false),
+    'about_image_url' => $OUTPUT->image_url('logo-sertaoconecta-semfundo', 'theme_sertao')->out(false),
     'login_url' => new moodle_url('/login/index.php'),
 ];
 

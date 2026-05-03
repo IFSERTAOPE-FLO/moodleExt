@@ -546,5 +546,25 @@
 
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.querySelector('.landing-navbar');
+    if (!navbar) {
+        return;
+    }
+
+    var togglePill = function() {
+        if (window.scrollY > 28) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    };
+
+    togglePill();
+    window.addEventListener('scroll', togglePill, { passive: true });
+});
+</script>
+
 </body>
 </html>
