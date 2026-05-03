@@ -59,6 +59,7 @@ Definição de pronto:
 - [ ] Ativar ranking básico (global/local, se aplicável).
 
 Definição de pronto:
+
 - Aluno recebe XP por ações.
 - Progressão e conquistas visíveis no curso.
 
@@ -70,6 +71,7 @@ Definição de pronto:
 - [ ] Criar atalhos para quiz, lição, H5P e jogos.
 
 Definição de pronto:
+
 - Painel interno navegável e útil para execução da trilha de aprendizagem.
 
 ## 21/05 a 22/05 — Acessibilidade, Desempenho e Segurança
