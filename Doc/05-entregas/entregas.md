@@ -81,6 +81,7 @@ Definição de pronto:
 - [ ] Revisar LGPD/termos, backups e HTTPS para produção.
 
 Definição de pronto:
+
 - Checklist de acessibilidade básico concluído.
 - Evidência de build otimizado e rotina de backup definida.
 
@@ -91,6 +92,7 @@ Definição de pronto:
 - [ ] Revisar documentação de setup, operação e evidências da entrega.
 
 Definição de pronto:
+
 - Sem bugs críticos abertos.
 - Evidências organizadas por requisito.
 
@@ -102,22 +104,27 @@ Definição de pronto:
 - [ ] Publicar checklist final assinado pela equipe.
 
 Definição de pronto:
+
 - Pacote de entrega completo e rastreável.
 
 ## 3. Priorização de Execução
 
 P0 (bloqueia entrega):
+
 - Telas externas, fluxo acadêmico, gamificação mínima, dashboard funcional.
 
 P1 (qualidade obrigatória):
+
 - Acessibilidade base, segurança operacional e desempenho.
 
 P2 (pós-entrega se faltar tempo):
+
 - Melhorias visuais avançadas, analytics/ML, recursos mobile avançados.
 
 ## 4. Quadro de Controle Diário
 
 Preencher diariamente:
+
 - Data:
 - Entregas concluídas:
 - Riscos identificados:
