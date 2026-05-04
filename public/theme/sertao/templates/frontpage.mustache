@@ -137,15 +137,17 @@
 .level-xp{font-size:1.1rem;font-weight:700;color:#22c55e}
 .level-xp-max{color:rgba(255,255,255,.5);font-weight:400}
 .stats-bar-2{background:#062b16;padding:28px 0;margin-top:48px}
-.cta-section{background:linear-gradient(145deg,#083520 0%,#0b5b33 100%);padding:90px 0 60px;position:relative;overflow:hidden;color:#fff;text-align:center}
-.cta-illustration{position:absolute;bottom:0;left:0;right:0;pointer-events:none;opacity:.35}
-.cta-section h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;position:relative}
+.cta-section{background:linear-gradient(145deg,#083520 0%,#0b5b33 100%);padding:100px 0 260px;position:relative;overflow:hidden;color:#fff;text-align:center}
+.cta-illustration{position:absolute;bottom:0;left:0;right:0;width:100%;height:220px;pointer-events:none;opacity:.4}
+.cta-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,160,0,.15);border:1px solid rgba(232,160,0,.35);border-radius:999px;padding:6px 18px;font-size:.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--sc-yellow);margin-bottom:20px;position:relative}
+.cta-section h2{font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.15;position:relative}
 .cta-section h2 .accent{color:var(--sc-yellow)}
-.cta-section p{color:var(--sc-muted);font-size:1rem;max-width:520px;margin:12px auto 32px;position:relative}
-.cta-mini-features{display:flex;justify-content:center;gap:40px;margin-top:40px;flex-wrap:wrap;position:relative}
+.cta-section p{color:var(--sc-muted);font-size:1.05rem;max-width:520px;margin:16px auto 36px;position:relative;line-height:1.7}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative}
+.cta-mini-features{display:flex;justify-content:center;gap:40px;margin-top:48px;flex-wrap:wrap;position:relative}
 .cta-mini-feature{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.8);font-size:.88rem}
-.cta-mini-feature .cta-icon{width:36px;height:36px;background:rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cta-mini-feature .cta-icon svg{width:18px;height:18px;fill:#fff}
+.cta-mini-feature .cta-icon{width:40px;height:40px;background:rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cta-mini-feature .cta-icon svg{width:20px;height:20px;fill:#fff}
 .sc-footer{background:#06281d;color:rgba(255,255,255,.75);padding:64px 0 0}
 .sc-footer .footer-brand img{width:90px;margin-bottom:12px}
 .sc-footer .footer-brand p{font-size:.85rem;line-height:1.6;max-width:240px;margin-bottom:20px}
@@ -699,9 +701,16 @@ POR QUE ESCOLHER?
   </svg>
 
   <div class="container" style="position:relative;z-index:1">
+    <div class="cta-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      Comece hoje mesmo — é gratuito
+    </div>
     <h2>Pronto para Começar sua<br><span class="accent">Jornada de Sucesso?</span></h2>
-    <p>Junte-se a milhares de estudantes e mude o seu futuro hoje mesmo com educação de qualidade.</p>
-    <a href="#cursos" class="btn-accent">Começar Agora &rarr;</a>
+    <p>Junte-se a milhares de estudantes e transforme o seu futuro com educação de qualidade no Sertão.</p>
+    <div class="cta-btns">
+      <a href="#cursos" class="btn-accent" style="font-size:1rem;padding:14px 36px">Começar Agora &rarr;</a>
+      <a href="#sobre" class="btn-outline-hero" style="font-size:1rem;padding:14px 36px">Saiba Mais</a>
+    </div>
 
     <div class="cta-mini-features">
       <div class="cta-mini-feature">
