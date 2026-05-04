@@ -8,10 +8,10 @@ $dark-bg: #1a1a1a;
 $text-light: #ffffff;
 $text-muted: #6c757d;
 
-// Transitions
+// Transições
 $smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-// Typography
+// Tipografia
 html {
     scroll-behavior: smooth;
 }
@@ -21,7 +21,7 @@ body.theme-sertao {
     color: #333;
     background-color: #fff !important;
 
-    // Navbar Customizations
+    // Navbar customizado com a identidade visual do projeto
     .landing-navbar {
         background-color: #0b5b33 !important;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
