@@ -13,7 +13,7 @@
 <style>
 /* ── Sertão Conecta – CSS inline (independente de cache SCSS) ── */
 :root{--sc-dark:#083520;--sc-mid:#0b5b33;--sc-yellow:#E8A000;--sc-light-green:#e8f5ed;--sc-muted:rgba(255,255,255,.7)}
-.landing-navbar{background:var(--sc-dark)!important;padding:12px 0;z-index:1050;transition:background .35s,padding .35s}
+.landing-navbar{background:var(--sc-dark)!important;padding:12px 0;z-index:1050;transition:background .35s,padding .35s;border:none!important;box-shadow:none!important}
 .landing-navbar .container{transition:background .35s,border-radius .35s,padding .35s,box-shadow .35s}
 .landing-navbar .navbar-brand img{width:44px;height:44px;object-fit:contain}
 .landing-navbar .navbar-brand .brand-name{font-size:1rem;font-weight:800;line-height:1.1;letter-spacing:.5px;color:#fff}
@@ -23,7 +23,7 @@
 .btn-nav-login:hover{background:rgba(255,255,255,.1);color:#fff}
 .btn-nav-cta{background:var(--sc-yellow);color:#1a1a1a!important;border:none;border-radius:999px;padding:8px 22px;font-weight:700;font-size:.9rem;text-decoration:none;transition:filter .2s}
 .btn-nav-cta:hover{filter:brightness(1.1)}
-.landing-navbar.scrolled{background:transparent!important}
+.landing-navbar.scrolled{background:transparent!important;padding-top:15px;border:none!important;box-shadow:none!important}
 .landing-navbar.scrolled .container{background:rgba(7,52,28,.92);border:1px solid rgba(255,255,255,.2);border-radius:999px;backdrop-filter:blur(8px);padding:8px 20px;box-shadow:0 14px 34px rgba(0,0,0,.25);max-width:1140px}
 @media(max-width:768px){.landing-navbar.scrolled .container{border-radius:16px}}
 .hero-section{background:linear-gradient(145deg,#0a3d20 0%,#062b16 100%);min-height:92vh;padding-top:130px!important;padding-bottom:80px;color:#fff;position:relative;overflow:visible}
@@ -747,6 +747,10 @@ POR QUE ESCOLHER?
 <!-- ================================================
      FOOTER
      ================================================ -->
+
+{{{ output.main_content }}}
+{{{ output.standard_after_main_region_html }}}
+
 <footer class="sc-footer">
   <div class="container">
     <div class="row g-5">
@@ -820,9 +824,6 @@ POR QUE ESCOLHER?
     &copy; 2026 Sertão Conecta &mdash; Desenvolvido por alunos do IFSERTÃO-PE Campus Floresta.
   </div>
 </footer>
-
-{{{ output.main_content }}}
-{{{ output.standard_after_main_region_html }}}
 
 </div><!-- #page-wrapper -->
 
