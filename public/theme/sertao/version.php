@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026051800;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2026051801;        // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2024100100;        // Requires this Moodle version (Moodle 5.1+).
 $plugin->component = 'theme_sertao';    // Full name of the plugin (used for diagnostics).
 $plugin->dependencies = [
