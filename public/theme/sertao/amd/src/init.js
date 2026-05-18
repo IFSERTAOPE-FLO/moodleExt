@@ -9,30 +9,51 @@ define(['jquery'], function($) {
     "use strict";
 
     return {
-        /**
-         * Initialise the theme frontpage effects.
-         */
         init: function() {
+            var $body = $('body');
+            var $navbar = $('.landing-navbar');
+            var $collapse = $('#scNav');
+
             var updateNavbarState = function() {
                 if ($(window).scrollTop() > 28) {
-                    $('.landing-navbar').addClass('scrolled');
+                    $navbar.addClass('scrolled');
                 } else {
-                    $('.landing-navbar').removeClass('scrolled');
+                    $navbar.removeClass('scrolled');
                 }
             };
 
-            // Navbar scroll effect (pill on scroll).
             $(window).on('scroll', updateNavbarState);
             updateNavbarState();
 
-            // Smooth scroll for anchor links
+            // Hamburger open/close lifecycle: lock body scroll while menu open.
+            $collapse.on('show.bs.collapse', function() { $body.addClass('nav-open'); });
+            $collapse.on('hide.bs.collapse', function() { $body.removeClass('nav-open'); });
+
+            // Close menu when a nav link is clicked (mobile).
+            $collapse.find('.nav-link, .btn-nav-login, .btn-nav-cta').on('click', function() {
+                if ($collapse.hasClass('show')) {
+                    var bsCollapse = window.bootstrap && window.bootstrap.Collapse
+                        ? window.bootstrap.Collapse.getInstance($collapse[0]) || new window.bootstrap.Collapse($collapse[0], {toggle: false})
+                        : null;
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    } else {
+                        $collapse.removeClass('show');
+                        $body.removeClass('nav-open');
+                    }
+                }
+            });
+
+            // Smooth scroll for anchor links.
             $('a[href^="#"]').on('click', function(e) {
-                e.preventDefault();
-                var target = $(this.getAttribute('href'));
+                var hash = this.getAttribute('href');
+                if (!hash || hash === '#') { return; }
+                var target = $(hash);
                 if (target.length) {
+                    e.preventDefault();
                     $('html, body').stop().animate({
                         scrollTop: target.offset().top - 70
-                    }, 800);
+                    }, 600);
                 }
             });
         }
